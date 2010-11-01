@@ -1,46 +1,26 @@
 import java.io.FileWriter;
 import java.io.IOException;
-import java.net.URL;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
 
 import model.KIMEntity;
 
-import org.openrdf.model.Graph;
-import org.openrdf.model.Literal;
-import org.openrdf.model.Resource;
-import org.openrdf.model.Statement;
-import org.openrdf.model.Value;
-
-import org.openrdf.model.URI;
 import org.openrdf.model.impl.URIImpl;
 
-import tool.Description;
 import tool.KIMAPI;
 
-import com.ontotext.kim.client.*;
-
-import com.ontotext.kim.client.coredb.CoreDbAPI;
-import com.ontotext.kim.client.coredb.query.CoreDbEntity;
-import com.ontotext.kim.client.corpora.CorporaAPI;
+import com.ontotext.kim.client.CompareStyleConstants;
+import com.ontotext.kim.client.GetService;
+import com.ontotext.kim.client.KIMService;
 import com.ontotext.kim.client.entity.EntityAPI;
 import com.ontotext.kim.client.entity.EntityDescription;
-import com.ontotext.kim.client.entity.EntityDescriptionImpl;
 import com.ontotext.kim.client.model.WKBConstants;
 import com.ontotext.kim.client.query.KIMQueryException;
 import com.ontotext.kim.client.query.QueryAPI;
 import com.ontotext.kim.client.query.SemanticQuery;
 import com.ontotext.kim.client.query.SemanticQueryResult;
 import com.ontotext.kim.client.query.SemanticQueryResultRow;
-import com.ontotext.kim.client.query.SemanticQuery.ReturnLabels;
-import com.ontotext.kim.client.semanticannotation.SemanticAnnotationAPI;
-import com.ontotext.kim.client.semanticrepository.ClosableIterator;
 import com.ontotext.kim.client.semanticrepository.SemanticRepositoryAPI;
-import com.ontotext.kim.client.semanticrepository.SemanticRepositoryException;
 import com.ontotext.kim.ontology.Ontology;
 import com.ontotext.kim.ontology.OntologyAPI;
 
