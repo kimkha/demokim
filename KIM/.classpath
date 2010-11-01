@@ -40,12 +40,6 @@
 	<classpathentry kind="lib" path="D:/soft/kim-platform-3.0-RC4/lib/sesame-sail-memory-2.3.1.jar"/>
 	<classpathentry kind="lib" path="D:/soft/kim-platform-3.0-RC4/lib/sesame-sail-nativerdf-2.3.1.jar"/>
 	<classpathentry kind="lib" path="D:/soft/kim-platform-3.0-RC4/lib/sesame-sail-rdbms-2.3.1.jar"/>
-	<classpathentry kind="lib" path="D:/soft/Protege_4.1_beta/plugins/org.coode.dlquery.jar"/>
-	<classpathentry kind="lib" path="D:/soft/Protege_4.1_beta/plugins/org.coode.owlviz.jar"/>
-	<classpathentry kind="lib" path="D:/soft/Protege_4.1_beta/plugins/org.protege.editor.owl.jar"/>
-	<classpathentry kind="lib" path="D:/soft/Protege_4.1_beta/plugins/org.protege.ontograf.jar"/>
-	<classpathentry kind="lib" path="D:/soft/Protege_4.1_beta/plugins/org.semanticweb.HermiT.jar"/>
-	<classpathentry kind="lib" path="D:/soft/Protege_4.1_beta/plugins/org.semanticweb.owl.owlapi.jar"/>
 	<classpathentry kind="lib" path="D:/Programming/Project/simmetrics_jar_v1_6_2_d07_02_07.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
