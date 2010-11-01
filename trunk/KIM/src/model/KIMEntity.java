@@ -85,7 +85,7 @@ public class KIMEntity extends KIMResource{
 				KIMAttribute attr = attributes.get(i);
 				str += "( " +  attr.getLabel() ;
 				String [] listvalues = attr.getValues();
-				for(int j=0; j< listvalues.length; i++){
+				for(int j=0; j< listvalues.length; j++){
 					str += ", " + listvalues[j];
 				}
 				str += ")\n";
