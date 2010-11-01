@@ -15,8 +15,7 @@ import org.openrdf.model.Literal;
 import org.openrdf.model.Resource;
 import org.openrdf.model.Statement;
 import org.openrdf.model.Value;
-import org.semanticweb.owlapi.model.OWLIndividual;
-import org.semanticweb.owlapi.model.OWLNamedIndividual;
+
 import org.openrdf.model.URI;
 import org.openrdf.model.impl.URIImpl;
 
@@ -54,15 +53,16 @@ public class Test {
 			QueryAPI queryApi = serviceKim.getQueryAPI();
 			EntityAPI entApi = serviceKim.getEntityAPI();
 			OntologyAPI ontoApi = serviceKim.getOntologyAPI();
-		    SemanticRepositoryAPI semRepoApi = serviceKim.getSemanticRepositoryAPI();
-		    
-		    KIMAPI.entApi = entApi;
-		    KIMAPI.queryApi = queryApi;
-		    KIMAPI.semApi = semRepoApi;
+			SemanticRepositoryAPI semRepoApi = serviceKim
+					.getSemanticRepositoryAPI();
+
+			KIMAPI.entApi = entApi;
+			KIMAPI.queryApi = queryApi;
+			KIMAPI.semApi = semRepoApi;
 			System.out.println("QueryAPI obtained successful");
 			SemanticQuery seq1 = new SemanticQuery();
 			Ontology onto = ontoApi.getOntology();
-			
+
 			FileWriter file = new FileWriter("entity.txt");
 			seq1.addRequestedVar("ORG"); // add variable ORG of class
 			// Organization
@@ -95,27 +95,27 @@ public class Test {
 			// entities to be returned with labels
 			// ----------------------------------------------------------------------------------
 			SemanticQueryResult resEntities = queryApi.getEntities(seq1);
-			
+
 			System.out.println("[ Entity Result (begin) ]");
 			file.write("[ Entity Result (begin) ]\n");
 			System.out.println("Entity Result size : " + resEntities.size());
-			file.write("Entity Result size : " + resEntities.size()+ "\n");
+			file.write("Entity Result size : " + resEntities.size() + "\n");
 			for (SemanticQueryResultRow row : resEntities) {
 				System.out.println(" - ---------------------------");
 				file.write("----------------\n");
 				EntityDescription e = entApi.getEntityDescription(new URIImpl(
 						row.get(0).toString()));
-				
+
 				KIMEntity en = new KIMEntity(e);
 				KIMEntity et = en.relations.get(0).listobj.get(0);
 				et.extract();
-				
+
 				System.out.println(en.getMainLabel());
 				System.out.println(en.isExtracted);
 				System.out.println(en.getFullInfo());
 				System.out.println(et.getMainLabel());
 			}
-	
+
 			file.close();
 			System.out.println("---------------------------");
 			System.out.println("[ Entity Result (end) ]");
@@ -133,6 +133,6 @@ public class Test {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} 
+		}
 	}
 }
