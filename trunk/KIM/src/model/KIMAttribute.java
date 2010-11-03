@@ -1,10 +1,13 @@
 package model;
 
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
 
+import org.openrdf.model.Graph;
 import org.openrdf.model.Literal;
 import org.openrdf.model.Resource;
+import org.openrdf.model.Statement;
 import org.openrdf.model.URI;
 
 import com.ontotext.kim.client.entity.EntityDescription;
@@ -42,6 +45,16 @@ public class KIMAttribute extends KIMResource{
 	}
 	
 	public boolean isFunctional(){
+		Graph g = entdes.toRDF();
+		Iterator<Statement> it = g.iterator();
+		while(it.hasNext()){
+			Statement sta = it.next();
+			if(sta.getPredicate().toString() == "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"){
+				if(sta.getObject().toString().contains("FunctionalProperty")){
+					return true;
+				}
+			}
+		}
 		return false;
 	}
 	
@@ -59,9 +72,12 @@ public class KIMAttribute extends KIMResource{
 
 	public String getLabel() {
 		// TODO Auto-generated method stub
-		return res.toString();
+		return res.stringValue();
 	}
 	
+	public String getValueAt(int i){
+		return values.get(i).toString();
+	}
 	public String[] getValues(){
 		if(values.size() == 0)
 			return null;
