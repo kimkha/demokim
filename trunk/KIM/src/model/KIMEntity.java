@@ -40,7 +40,7 @@ public class KIMEntity extends KIMResource {
 		if (isExtracted == true)
 			return;
 		if (entdes == null) {
-			entdes = KIMAPI.entApi.getEntityDescription(res);
+			entdes = KIMAPI.getEntApi().getEntityDescription(res);
 		}
 		attributes = new ArrayList<KIMAttribute>();
 		relations = new ArrayList<KIMRelation>();

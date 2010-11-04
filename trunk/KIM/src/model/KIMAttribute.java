@@ -22,7 +22,7 @@ public class KIMAttribute extends KIMResource{
 	public KIMAttribute(URI uri){
 		this.res = uri;
 		try {
-			entdes = KIMAPI.entApi.getEntityDescription(uri);
+			entdes = KIMAPI.getEntApi().getEntityDescription(uri);
 		} catch (KIMQueryException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -32,7 +32,7 @@ public class KIMAttribute extends KIMResource{
 	public KIMAttribute(URI uri, Collection<Literal> c){
 		this.res = uri;
 		try {
-			entdes = KIMAPI.entApi.getEntityDescription(uri);
+			entdes = KIMAPI.getEntApi().getEntityDescription(uri);
 		} catch (KIMQueryException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -1,49 +1,23 @@
 import java.io.FileWriter;
 import java.io.IOException;
-import java.rmi.NotBoundException;
-import java.rmi.RemoteException;
+import java.util.List;
 
 import model.KIMEntity;
-
-import org.openrdf.model.impl.URIImpl;
-
 import tool.KIMAPI;
 
 import com.ontotext.kim.client.CompareStyleConstants;
-import com.ontotext.kim.client.GetService;
-import com.ontotext.kim.client.KIMService;
-import com.ontotext.kim.client.entity.EntityAPI;
-import com.ontotext.kim.client.entity.EntityDescription;
 import com.ontotext.kim.client.model.WKBConstants;
 import com.ontotext.kim.client.query.KIMQueryException;
-import com.ontotext.kim.client.query.QueryAPI;
 import com.ontotext.kim.client.query.SemanticQuery;
-import com.ontotext.kim.client.query.SemanticQueryResult;
-import com.ontotext.kim.client.query.SemanticQueryResultRow;
-import com.ontotext.kim.client.semanticrepository.SemanticRepositoryAPI;
-import com.ontotext.kim.ontology.Ontology;
-import com.ontotext.kim.ontology.OntologyAPI;
 
 public class Test {
 	public static void main(String args[]) {
 
 		try {
-			KIMService serviceKim = GetService.from();
-			System.out.println("KIM Server connected.");
-			QueryAPI queryApi = serviceKim.getQueryAPI();
-			EntityAPI entApi = serviceKim.getEntityAPI();
-			OntologyAPI ontoApi = serviceKim.getOntologyAPI();
-			SemanticRepositoryAPI semRepoApi = serviceKim
-					.getSemanticRepositoryAPI();
-
-			KIMAPI.entApi = entApi;
-			KIMAPI.queryApi = queryApi;
-			KIMAPI.semApi = semRepoApi;
+			KIMAPI.start();
 			System.out.println("QueryAPI obtained successful");
 			SemanticQuery seq1 = new SemanticQuery();
-			Ontology onto = ontoApi.getOntology();
 
-			FileWriter file = new FileWriter("entity.txt");
 			seq1.addRequestedVar("ORG"); // add variable ORG of class
 			// Organization
 			seq1.addRequestedVar("PERS"); // add variable PERS of class Person
@@ -74,39 +48,24 @@ public class Test {
 					WKBConstants.PROPERTY_WITHIN_ORGANIZATION, "ORG"); // restrict
 			// entities to be returned with labels
 			// ----------------------------------------------------------------------------------
-			SemanticQueryResult resEntities = queryApi.getEntities(seq1);
+			List<KIMEntity> listEntities = KIMAPI.getEntities(seq1);
 
+			FileWriter file = new FileWriter("entity.txt");
 			System.out.println("[ Entity Result (begin) ]");
 			file.write("[ Entity Result (begin) ]\n");
-			System.out.println("Entity Result size : " + resEntities.size());
-			file.write("Entity Result size : " + resEntities.size() + "\n");
-			for (SemanticQueryResultRow row : resEntities) {
-				System.out.println(" - ---------------------------");
-				file.write("----------------\n");
-				EntityDescription e = entApi.getEntityDescription(new URIImpl(
-						row.get(0).toString()));
+			System.out.println("Entity Result size : " + listEntities.size());
+			file.write("Entity Result size : " + listEntities.size() + "\n");
+			file.write("----------------------------\n");
 
-				KIMEntity en = new KIMEntity(e);
-				KIMEntity et = en.relations.get(0).listobj.get(0);
-				et.extract();
-
-				System.out.println(en.getMainLabel());
-				System.out.println(en.isExtracted);
-				System.out.println(en.getFullInfo());
-				System.out.println(et.getMainLabel());
+			for (int i=0; i<listEntities.size(); i++) {
+				// TODO Do something
+				System.out.println(listEntities.get(i).getMainLabel());
+				file.write(listEntities.get(i).getMainLabel()+"\n");
 			}
-
+			
 			file.close();
 			System.out.println("---------------------------");
 			System.out.println("[ Entity Result (end) ]");
-		} catch (RemoteException e) {
-			// TODO Auto-generated catch block
-			System.out.println("Remote");
-			e.printStackTrace();
-		} catch (NotBoundException e) {
-			// TODO Auto-generated catch block
-			System.out.println("Notbound");
-			e.printStackTrace();
 		} catch (KIMQueryException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
