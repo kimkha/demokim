@@ -24,6 +24,23 @@ public class DuplicateAPI {
 		return 0;
 	}
 	
+	public static double getSimilarity(KIMAttribute a1, KIMAttribute a2){
+		return 0;
+	}
+	
+	public static double getSimilarityInAttribute(KIMEntity e1, KIMEntity e2){
+		return 0;
+	}
 	
 	
+	
+	public static double getDifferentInAttribute(KIMEntity e1, KIMEntity e2){
+		return 0;
+	}
+	
+	public boolean isComparable(KIMAttribute a1, KIMAttribute a2){
+		if(a1.getLabel() == a2.getLabel())
+			return true;
+		return false;
+	}
 }
