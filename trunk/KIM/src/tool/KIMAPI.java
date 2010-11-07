@@ -48,6 +48,10 @@ public class KIMAPI {
 	}
 	
 	public static List<KIMEntity> getEntities(SemanticQuery seq) {
+		if (getQueryApi() == null) {
+			System.out.println("You must call KIMAPI.start() first");
+			return null;
+		}
 		try {
 			List<KIMEntity> list = new ArrayList<KIMEntity>();
 			SemanticQueryResult resEntities = getQueryApi().getEntities(seq);

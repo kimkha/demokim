@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.openrdf.model.Literal;
 
+import tool.jaro.JaroWinklerDistance;
+
 import model.KIMAttribute;
 import model.KIMEntity;
 
@@ -17,7 +19,10 @@ public class DuplicateAPI {
 	}
 	
 	public static double getSimilarity(String s1, String s2, KIMAttribute a){
-		return 0;
+		JaroWinklerDistance jaro = JaroWinklerDistance.JARO_WINKLER_DISTANCE;
+		double prox = jaro.proximity(s1, s2);
+		// TODO Cần thêm hàm tính độ quan trọng của thuộc tính này.
+		return prox;
 	}
 	
 	public static double getSimilarity(List<Literal> values1, List<Literal> values2, KIMAttribute a){
