@@ -15,7 +15,28 @@ public class DuplicateAPI {
 	private static JaroWinklerDistance jaro = JaroWinklerDistance.JARO_WINKLER_DISTANCE;
 	
 	public static double Similarity(KIMEntity e1, KIMEntity e2){
-		return 0;
+		if (!e1.isExtracted) {
+			try {
+				e1.extract();
+			} catch (KIMQueryException e) {
+				e.printStackTrace();
+				return 0;
+			}
+		}
+		
+		if (e2.isExtracted) {
+			try {
+				e2.extract();
+			} catch (KIMQueryException e) {
+				e.printStackTrace();
+				return 0;
+			}
+		}
+		
+		double prox = 0;
+		prox = getSimilarityInAttribute(e1, e2);
+		//TODO Cần thêm hàm cho các quan hệ
+		return prox;
 	}
 	
 	public static double getAttributeStrength(KIMAttribute a){
@@ -48,7 +69,10 @@ public class DuplicateAPI {
 		return getSimilarity(a1.values, a2.values, a1);
 	}
 	
-	public static double getSimilarity(List<KIMAttribute> val1, List<KIMAttribute> val2) {
+	public static double getSimilarityInAttribute(KIMEntity e1, KIMEntity e2){
+		List<KIMAttribute> val1 = e1.attributes;
+		List<KIMAttribute> val2 = e2.attributes;
+		
 		double total = 0;
 		int num = 0;
 		
@@ -56,7 +80,7 @@ public class DuplicateAPI {
 			KIMAttribute a1 = val1.get(i);
 			for (int j=0; j<val2.size(); j++) {
 				KIMAttribute a2 = val2.get(i);
-				if (a1.getLabel().equals(a2.getLabel())) {
+				if (isComparable(a1, a2)) {
 					total += getSimilarity(a1, a2);
 					num++;
 				}
@@ -69,35 +93,11 @@ public class DuplicateAPI {
 		return total/num;
 	}
 	
-	public static double getSimilarityInAttribute(KIMEntity e1, KIMEntity e2){
-		if (!e1.isExtracted) {
-			try {
-				e1.extract();
-			} catch (KIMQueryException e) {
-				e.printStackTrace();
-				return 0;
-			}
-		}
-		
-		if (e2.isExtracted) {
-			try {
-				e2.extract();
-			} catch (KIMQueryException e) {
-				e.printStackTrace();
-				return 0;
-			}
-		}
-		
-		return getSimilarity(e1.attributes, e2.attributes);
-	}
-	
 	public static double getDifferentInAttribute(KIMEntity e1, KIMEntity e2){
 		return (1-getSimilarityInAttribute(e1, e2));
 	}
 	
-	public boolean isComparable(KIMAttribute a1, KIMAttribute a2){
-		if(a1.getLabel() == a2.getLabel())
-			return true;
-		return false;
+	public static boolean isComparable(KIMAttribute a1, KIMAttribute a2){
+		return a1.getLabel().equals(a2.getLabel());
 	}
 }
