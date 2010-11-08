@@ -31,7 +31,6 @@ public class KIMEntity extends KIMResource {
 		try {
 			extract();
 		} catch (KIMQueryException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
