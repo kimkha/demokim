@@ -5,6 +5,8 @@ import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.openrdf.model.Resource;
+import org.openrdf.model.URI;
 import org.openrdf.model.impl.URIImpl;
 
 import model.KIMEntity;
@@ -105,5 +107,10 @@ public class KIMAPI {
 
 	public static Ontology getOnto() {
 		return onto;
+	}
+
+	public static List<URI> getAllEntityInClass(Resource kimClass) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
