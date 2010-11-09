@@ -1,5 +1,6 @@
 package model;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -28,18 +29,24 @@ public class KIMEntity extends KIMResource {
 	public KIMEntity(EntityDescription ent) {
 		this.entdes = ent;
 		res = ent.getResource();
-		try {
-			extract();
-		} catch (KIMQueryException e) {
-			e.printStackTrace();
-		}
-	}
+		extract();
 
-	public void extract() throws KIMQueryException {
+	}
+	
+	public KIMEntity(File xmlfile){
+		
+	}
+	
+	public void extract(){
 		if (isExtracted == true)
 			return;
 		if (entdes == null) {
-			entdes = KIMAPI.getEntApi().getEntityDescription(res);
+			try {
+				entdes = KIMAPI.getEntApi().getEntityDescription(res);
+			} catch (KIMQueryException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		attributes = new ArrayList<KIMAttribute>();
 		relations = new ArrayList<KIMRelation>();

@@ -1,5 +1,5 @@
 package model;
 
-public class KIMProperty {
+public abstract class KIMProperty extends KIMResource{
 
 }

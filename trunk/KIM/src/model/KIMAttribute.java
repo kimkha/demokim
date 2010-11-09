@@ -15,7 +15,7 @@ import com.ontotext.kim.client.query.KIMQueryException;
 
 import tool.KIMAPI;
 
-public class KIMAttribute extends KIMResource{
+public class KIMAttribute extends KIMProperty{
 	public List<Literal> values;
 	public EntityDescription entdes;
 	
@@ -40,8 +40,9 @@ public class KIMAttribute extends KIMResource{
 		values = (List<Literal>) c;
 	}
 	
-	private void extract(){
-			
+	@SuppressWarnings("unused")
+	public void extract(){
+		return;
 	}
 	
 	public boolean isFunctional(){

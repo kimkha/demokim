@@ -7,7 +7,7 @@ import java.util.List;
 
 import org.openrdf.model.Resource;
 import org.openrdf.model.URI;
-public class KIMRelation extends KIMResource{
+public class KIMRelation extends KIMProperty{
 	public List<KIMEntity> listobj;
 	public KIMRelation(URI uri){
 		this.res = uri;
@@ -46,5 +46,11 @@ public class KIMRelation extends KIMResource{
 	
 	public KIMAttribute getSuperAttribute(){
 		return null;
+	}
+
+	@Override
+	public void extract() {
+		// TODO Auto-generated method stub
+		
 	}
 }
