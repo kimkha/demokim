@@ -16,21 +16,11 @@ public class DuplicateAPI {
 	
 	public static double Similarity(KIMEntity e1, KIMEntity e2){
 		if (!e1.isExtracted) {
-			try {
-				e1.extract();
-			} catch (KIMQueryException e) {
-				e.printStackTrace();
-				return 0;
-			}
+			e1.extract();
 		}
 		
 		if (e2.isExtracted) {
-			try {
-				e2.extract();
-			} catch (KIMQueryException e) {
-				e.printStackTrace();
-				return 0;
-			}
+			e2.extract();
 		}
 		
 		double prox = 0;
