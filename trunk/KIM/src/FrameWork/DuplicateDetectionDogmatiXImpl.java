@@ -20,22 +20,7 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 	private double valueThreshold; // for string
 	private double simThreshold; // for entity
 
-	private double getSimilarityAttribute(Map m1, Map m2) {
-		return 0;
-	}
-
-	private double getContractoryAttribute(Map m1, Map m2) {
-		return 0;
-	}
-
-	private double getSimilarityRelation(Map m1, Map m2) {
-		EntityDescriptionImpl e;
-		return 0;
-	}
-
-	private double getContractoryRelation(Map m1, Map m2) {
-		return 0;
-	}
+	
 
 	public boolean isDuplicate(KIMEntity e1, KIMEntity e2) {
 		double sim = getSimilarity(e1, e2);
