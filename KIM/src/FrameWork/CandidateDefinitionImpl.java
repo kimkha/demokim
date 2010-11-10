@@ -1,6 +1,8 @@
 package FrameWork;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import org.openrdf.model.Resource;
@@ -18,15 +20,23 @@ public class CandidateDefinitionImpl implements CandidateDefinition{
 		if(candidateDefFile == null){
 			// truy van cac thuc the cung lop
 			Resource kimClass = e.getKIMClass().res;
-			List<URI> listcan = KIMAPI.getAllEntityInClass(kimClass);
+			List<URI> listcan = new ArrayList();
+			Iterator<URI> itcan = KIMAPI.getAllEntityURIInClass(kimClass);
+			while(itcan.hasNext()){
+				listcan.add(itcan.next());
+			}
 			return listcan;
 		}
+		return null;
+	}
+	
+	public List<URI> listCandidate(){
 		return null;
 	}
 
 	@Override
 	public void setCandidateDefFile(File f) {
-		// TODO Auto-generated method stub
+		this.candidateDefFile = f;
 		
 	}
 
