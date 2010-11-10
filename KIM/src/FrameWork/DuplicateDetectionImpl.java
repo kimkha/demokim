@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.openrdf.model.URI;
 
@@ -27,7 +28,7 @@ public class DuplicateDetectionImpl implements DuplicateDetection{
 		return 0;
 	}
 	
-	
+
 	private DuplicateResult isDuplicate(KIMEntity e1, KIMEntity e2){
 		DuplicateResult dupl = new DuplicateResult();
 		dupl.similary = DuplicateAPI.Similarity(e1, e2);
@@ -71,7 +72,7 @@ public class DuplicateDetectionImpl implements DuplicateDetection{
 	}
 
 	@Override
-	public List<Collection<KIMEntity>> getDuplicateClus() {
+	public List<Set<KIMEntity>> getDuplicateClus() {
 		return null;
 	}
 
