@@ -53,4 +53,9 @@ public class KIMRelation extends KIMProperty{
 		// TODO Auto-generated method stub
 		
 	}
+
+	public String getLabel() {
+		// TODO Auto-generated method stub
+		return ((URI)res).getLocalName();
+	}
 }
