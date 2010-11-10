@@ -32,7 +32,6 @@ public class KIMAPI {
 	private static Ontology onto = null;
 	
 	public static void start(){
-
 		KIMService service;
 		try {
 			service = GetService.from();
@@ -64,6 +63,21 @@ public class KIMAPI {
 			}
 			return list;
 		} catch (KIMQueryException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public static KIMEntity getEntity(URI uri) {
+		if (getQueryApi() == null) {
+			System.out.println("You must call KIMAPI.start() first");
+			return null;
+		}
+		try {
+			EntityDescription e = getEntApi().getEntityDescription(uri);
+			return new KIMEntity(e);
+		} catch (KIMQueryException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return null;

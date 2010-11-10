@@ -1,4 +1,0 @@
-[ Entity Result (begin) ]
-Entity Result size : 1
-----------------------------
-"J-Phone Co., Ltd."
