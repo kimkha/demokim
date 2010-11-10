@@ -104,6 +104,14 @@ public class KIMEntity extends KIMResource {
 				}
 				str += ")\n";
 			}
+			for (int i = 0; i < relations.size(); i++) {
+				KIMRelation rela = relations.get(i);
+				str += "( " + rela.getLabel();
+				List<KIMEntity> listObject = rela.listobj;
+				for(int j=0; j < listObject.size(); j++)
+					str += ',' + listObject.get(j).res.toString();
+				str += ")\n";
+			}
 			return str;
 		} else
 			return null;

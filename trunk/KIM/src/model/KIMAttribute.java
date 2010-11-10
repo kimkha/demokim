@@ -17,7 +17,7 @@ import tool.KIMAPI;
 
 public class KIMAttribute extends KIMProperty{
 	public List<Literal> values;
-	public EntityDescription entdes;
+	
 	
 	public KIMAttribute(URI uri){
 		this.res = uri;
@@ -73,7 +73,7 @@ public class KIMAttribute extends KIMProperty{
 
 	public String getLabel() {
 		// TODO Auto-generated method stub
-		return res.stringValue();
+		return ((URI)res).getLocalName();
 	}
 	
 	public String getValueAt(int i){
