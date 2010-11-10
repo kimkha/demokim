@@ -31,8 +31,7 @@ public class DuplicateDefinitionImpl implements DuplicateDefinition{
 
 	@Override
 	public void setDupDefFile(File f) {
-		// TODO Auto-generated method stub
-		
+		this.dupDefFile = f;
 	}
 
 	@Override
