@@ -17,7 +17,6 @@ import com.ontotext.kim.client.GetService;
 import com.ontotext.kim.client.KIMService;
 import com.ontotext.kim.client.entity.EntityAPI;
 import com.ontotext.kim.client.entity.EntityDescription;
-import com.ontotext.kim.client.model.WKBConstants;
 import com.ontotext.kim.client.query.KIMQueryException;
 import com.ontotext.kim.client.query.QueryAPI;
 import com.ontotext.kim.client.query.SemanticQuery;
