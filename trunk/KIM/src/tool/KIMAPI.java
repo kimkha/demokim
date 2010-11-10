@@ -3,6 +3,8 @@ package tool;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 import org.openrdf.model.Resource;
@@ -15,12 +17,15 @@ import com.ontotext.kim.client.GetService;
 import com.ontotext.kim.client.KIMService;
 import com.ontotext.kim.client.entity.EntityAPI;
 import com.ontotext.kim.client.entity.EntityDescription;
+import com.ontotext.kim.client.model.WKBConstants;
 import com.ontotext.kim.client.query.KIMQueryException;
 import com.ontotext.kim.client.query.QueryAPI;
 import com.ontotext.kim.client.query.SemanticQuery;
 import com.ontotext.kim.client.query.SemanticQueryResult;
 import com.ontotext.kim.client.query.SemanticQueryResultRow;
+import com.ontotext.kim.client.semanticrepository.ClosableIterator;
 import com.ontotext.kim.client.semanticrepository.SemanticRepositoryAPI;
+import com.ontotext.kim.client.semanticrepository.SemanticRepositoryException;
 import com.ontotext.kim.ontology.Ontology;
 import com.ontotext.kim.ontology.OntologyAPI;
 
@@ -123,8 +128,28 @@ public class KIMAPI {
 		return onto;
 	}
 
-	public static List<URI> getAllEntityInClass(Resource kimClass) {
-		// TODO Auto-generated method stub
+	public static Iterator<URI> getAllEntityURIInClass(Resource kimClass) {
+		try {
+			ClosableIterator<URI> ci = semRepoApi.getInstances(kimClass);
+			return ci;
+		} catch (SemanticRepositoryException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		/*SemanticQuery seq = new SemanticQuery();
+		List<URI> list = new ArrayList<URI>();
+		try {
+			seq.addRequestedVar("KIMCLASSS");
+			seq.setClass("KIMCLASS", kimClass.toString());
+			SemanticQueryResult resEntities = getQueryApi().getEntities(seq);
+			for (SemanticQueryResultRow row : resEntities) {
+				list.add(new URIImpl(row.get(0).toString()));
+			}
+			return list;
+		} catch (KIMQueryException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
 		return null;
 	}
 }
