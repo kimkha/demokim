@@ -18,7 +18,7 @@ public class DuplicateDefinitionImpl implements DuplicateDefinition{
 	public Map<String,String> getDescription(KIMEntity e) {
 		Map<String, String> map = new TreeMap<String, String>();
 		if(dupDefFile == null){
-			Graph graph = e.entdes.toRDF();
+			Graph graph = e.toRDF();
 			Iterator<Statement> stas = graph.iterator();
 			while(stas.hasNext()){
 				Statement s = stas.next();
