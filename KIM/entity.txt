@@ -1,0 +1,5 @@
+[ Entity Result (begin) ]
+Entity Result size : 0
+----------------------------
+---------------------------
+[ Entity Result (end) ]
