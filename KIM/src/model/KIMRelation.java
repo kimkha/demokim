@@ -7,11 +7,15 @@ import java.util.List;
 
 import org.openrdf.model.Resource;
 import org.openrdf.model.URI;
+
+import com.ontotext.kim.client.entity.EntityDescription;
 public class KIMRelation extends KIMProperty{
+	private EntityDescription entdes;
 	public List<KIMEntity> listobj;
 	public KIMRelation(URI uri){
 		this.res = uri;
 		listobj = new ArrayList<KIMEntity>();
+		
 	}
 	
 	public KIMRelation(URI uri, Collection<Resource> obj){
@@ -57,5 +61,11 @@ public class KIMRelation extends KIMProperty{
 	public String getLabel() {
 		// TODO Auto-generated method stub
 		return ((URI)res).getLocalName();
+	}
+
+	@Override
+	public String stringValue() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

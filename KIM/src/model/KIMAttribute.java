@@ -16,13 +16,13 @@ import com.ontotext.kim.client.query.KIMQueryException;
 import tool.KIMAPI;
 
 public class KIMAttribute extends KIMProperty{
+	private EntityDescription entdes;
 	public List<Literal> values;
-	
-	
 	public KIMAttribute(URI uri){
 		this.res = uri;
 		try {
 			entdes = KIMAPI.getEntApi().getEntityDescription(uri);
+			EntityDescription e;
 		} catch (KIMQueryException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -40,7 +40,6 @@ public class KIMAttribute extends KIMProperty{
 		values = (List<Literal>) c;
 	}
 	
-	@SuppressWarnings("unused")
 	public void extract(){
 		return;
 	}
@@ -87,5 +86,11 @@ public class KIMAttribute extends KIMProperty{
 			str[i] = values.get(i).toString();
 		}
 		return str;
+	}
+
+	@Override
+	public String stringValue() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }	
