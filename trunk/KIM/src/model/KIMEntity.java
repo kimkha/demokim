@@ -6,6 +6,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
+import org.openrdf.model.Graph;
 import org.openrdf.model.Literal;
 import org.openrdf.model.Resource;
 import org.openrdf.model.URI;
@@ -15,15 +16,16 @@ import tool.KIMAPI;
 import com.ontotext.kim.client.entity.EntityDescription;
 import com.ontotext.kim.client.query.KIMQueryException;
 
-public class KIMEntity extends KIMResource {
+public class KIMEntity extends KIMResource implements EntityDescription{
 
-	public EntityDescription entdes = null;
+	private EntityDescription entdes = null;
 	public boolean isExtracted = false;
 	public List<KIMAttribute> attributes = null;
 	public List<KIMRelation> relations = null;
 
 	public KIMEntity(Resource res) {
 		this.res = res;
+		
 	}
 
 	public KIMEntity(EntityDescription ent) {
@@ -70,8 +72,8 @@ public class KIMEntity extends KIMResource {
 		isExtracted = true;
 	}
 
-	public String getMainLabel() {
-		return entdes.getMainLabel().toString();
+	public Literal getMainLabel() {
+		return entdes.getMainLabel();
 	}
 
 	public String[] getLabel() {
@@ -117,8 +119,80 @@ public class KIMEntity extends KIMResource {
 			return null;
 	}
 
-	public String getResource() {
-		return this.res.toString();
+	public Resource getResource() {
+		return this.res;
+	}
+
+	@Override
+	public Collection<URI> getAttributeTypes() {
+		// TODO Auto-generated method stub
+		return entdes.getAttributeTypes();
+	}
+
+	@Override
+	public Collection<Literal> getAttributes(URI arg0) {
+		// TODO Auto-generated method stub
+		return entdes.getAttributes(arg0);
+	}
+
+	@Override
+	public Object getContext(URI arg0) {
+		// TODO Auto-generated method stub
+		return entdes.getContext(arg0);
+	}
+
+	@Override
+	public Collection<URI> getContextTypes() {
+		// TODO Auto-generated method stub
+		return entdes.getContextTypes();
+	}
+
+	@Override
+	public Collection<URI> getPrefetchedRelationTypes() {
+		// TODO Auto-generated method stub
+		return entdes.getPrefetchedRelationTypes();
+	}
+
+	@Override
+	public Collection<EntityDescription> getPrefetchedRelations(URI arg0) {
+		// TODO Auto-generated method stub
+		return entdes.getPrefetchedRelations(arg0);
+	}
+
+	@Override
+	public Collection<URI> getRelationTypes() {
+		// TODO Auto-generated method stub
+		return entdes.getRelationTypes();
+	}
+
+	@Override
+	public Collection<Resource> getRelations(URI arg0) {
+		// TODO Auto-generated method stub
+		return entdes.getRelations(arg0);
+	}
+
+	@Override
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return entdes.isEmpty();
+	}
+
+	@Override
+	public Graph toRDF() {
+		// TODO Auto-generated method stub
+		return entdes.toRDF();
+	}
+
+	@Override
+	public Collection<Literal> getLabels() {
+		// TODO Auto-generated method stub
+		return entdes.getLabels();
+	}
+
+	@Override
+	public String stringValue() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

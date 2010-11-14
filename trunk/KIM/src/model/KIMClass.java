@@ -10,5 +10,11 @@ public class KIMClass extends KIMResource{
 		
 	}
 
+	@Override
+	public String stringValue() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	
 }
