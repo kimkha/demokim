@@ -1,18 +1,16 @@
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
 
-import org.openrdf.model.Literal;
+import model.KIMEntity;
+
 import org.openrdf.model.impl.LiteralImpl;
 import org.openrdf.model.impl.URIImpl;
 
-import model.KIMEntity;
 import tool.KIMAPI;
+import tool.parser.RDFFile;
 
 import com.ontotext.kim.client.CompareStyleConstants;
-import com.ontotext.kim.client.entity.EntityDescription;
 import com.ontotext.kim.client.entity.EntityDescriptionImpl;
 import com.ontotext.kim.client.model.WKBConstants;
 import com.ontotext.kim.client.query.KIMQueryException;
@@ -67,6 +65,8 @@ public class Test {
 				System.out.println(listEntities.get(i).getFullInfo());
 				file.write(listEntities.get(i).getMainLabel()+"\n");
 			}
+			
+			RDFFile f = new RDFFile("entity.xml");
 			
 			EntityDescriptionImpl e = new EntityDescriptionImpl(new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#TL"));
 			e.addAttribute(new URIImpl("http://www.w3.org/2000/01/rdf-schema#label"), new LiteralImpl("ThanhLuan"));
