@@ -1,5 +1,6 @@
 package FrameWork;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
@@ -7,8 +8,15 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import org.openrdf.model.URI;
 
+
+import org.apache.xerces.parsers.DOMParser;
+import org.apache.xerces.xni.parser.XMLInputSource;
+import org.openrdf.model.URI;
+import org.w3c.dom.*;
+import org.xml.sax.SAXException;
+
+import javax.xml.transform.dom.*;
 import com.ontotext.kim.client.entity.EntityDescriptionImpl;
 
 import model.KIMEntity;
@@ -80,6 +88,25 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 			}
 		}
 		return clus;
+	}
+
+	@Override
+	public KIMEntity findDuplicate(KIMEntity e, Set<KIMEntity> setEntity) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Set<KIMEntity> findDuplicates(KIMEntity e, Set<KIMEntity> setEntity) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Set<KIMEntity>> getDuplicateClus(List<KIMEntity> liste1,
+			List<KIMEntity> liste2) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

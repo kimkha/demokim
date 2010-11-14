@@ -8,6 +8,9 @@ import model.KIMEntity;
 
 public interface DuplicateDetection {
 	public KIMEntity getDuplicate(KIMEntity e);
+	public KIMEntity findDuplicate(KIMEntity e, Set<KIMEntity> setEntity);
+	public Set<KIMEntity> findDuplicates(KIMEntity e, Set<KIMEntity> setEntity);
 	public List<Set<KIMEntity>> getDuplicateClus();
-	//public boolean isDuplicate(KIMEntity e1, KIMEntity e2);
+	public List<Set<KIMEntity>> getDuplicateClus(List<KIMEntity> liste1, List<KIMEntity> liste2);
+	public boolean isDuplicate(KIMEntity e1, KIMEntity e2);
 }
