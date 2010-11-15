@@ -2,36 +2,43 @@ package FrameWork;
 
 import java.io.File;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
 import org.openrdf.model.Graph;
 import org.openrdf.model.Statement;
 
+import model.Description;
 import model.DupDefPolicy;
+import model.ElementDescription;
 import model.KIMEntity;
+import model.RelationDescription;
 
 public class DuplicateDefinitionImpl implements DuplicateDefinition{
 
-	private File dupDefFile = null;
 	@Override
-	public Map<String,String> getDescription(KIMEntity e) {
-		Map<String, String> map = new TreeMap<String, String>();
-		if(dupDefFile == null){
-			Graph graph = e.toRDF();
-			Iterator<Statement> stas = graph.iterator();
-			while(stas.hasNext()){
-				Statement s = stas.next();
-				map.put(s.getPredicate().getLocalName(), s.getObject().stringValue());
-			}
-			return map;
-		}
+	public List<Description> getDescription(KIMEntity e) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ElementDescription> getElementDescription(KIMEntity e) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<RelationDescription> getRelationDescription(KIMEntity e) {
+		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public void setDupDefFile(File f) {
-		this.dupDefFile = f;
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
@@ -39,6 +46,6 @@ public class DuplicateDefinitionImpl implements DuplicateDefinition{
 		// TODO Auto-generated method stub
 		
 	}
-	
+
 
 }
