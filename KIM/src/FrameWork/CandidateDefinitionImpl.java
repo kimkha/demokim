@@ -10,6 +10,8 @@ import org.openrdf.model.URI;
 
 import tool.KIMAPI;
 
+import model.CanDefPolicy;
+import model.KIMClass;
 import model.KIMEntity;
 
 public class CandidateDefinitionImpl implements CandidateDefinition{
@@ -38,6 +40,18 @@ public class CandidateDefinitionImpl implements CandidateDefinition{
 	public void setCandidateDefFile(File f) {
 		this.candidateDefFile = f;
 		
+	}
+
+	@Override
+	public List<URI> listCandidate(KIMClass c) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<URI> listCandidate(CanDefPolicy candef) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
