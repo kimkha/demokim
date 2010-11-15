@@ -8,6 +8,7 @@ import org.openrdf.model.impl.URIImpl;
 import model.KIMEntity;
 
 import com.ontotext.kim.client.CompareStyleConstants;
+import com.ontotext.kim.client.entity.EntityDescription;
 import com.ontotext.kim.client.entity.EntityDescriptionImpl;
 import com.ontotext.kim.client.model.WKBConstants;
 import com.ontotext.kim.client.query.KIMQueryException;
@@ -37,7 +38,7 @@ public class Test {
 		//			CompareStyleConstants.COMPARE_STYLE_CONTAINS, "manager"); // restrict
 			
 			seq1.addNameRestriction("PERS",
-					CompareStyleConstants.COMPARE_STYLE_CONTAINS, "John"); // restrict
+					CompareStyleConstants.COMPARE_STYLE_CONTAINS, "KimKha"); // restrict
 			// person
 			// to
 			// start
@@ -64,10 +65,14 @@ public class Test {
 
 			for (int i=0; i<listEntities.size(); i++) {
 				// TODO Do something
+				System.out.println(listEntities.get(i).res.toString());
 				System.out.println(listEntities.get(i).getFullInfo());
 				file.write(listEntities.get(i).getMainLabel()+"\n");
 			}
-			
+			EntityDescription j = KIMAPI.getEntity(new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#KK.Alias.KimKh2047488651"));
+			KIMEntity je = new KIMEntity(j);
+			System.out.println("Johnson main alias");
+			System.out.println(je.getFullInfo());
 			EntityDescriptionImpl e = new EntityDescriptionImpl(new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#TL"));
 			e.addAttribute(new URIImpl("http://www.w3.org/2000/01/rdf-schema#label"), new LiteralImpl("ThanhLuan"));
 			e.addAttribute(new URIImpl("http://www.w3.org/2000/01/rdf-schema#comment"), new LiteralImpl("Luan trum"));

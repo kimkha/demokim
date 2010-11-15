@@ -1,5 +1,6 @@
 [ Entity Result (begin) ]
-Entity Result size : 0
+Entity Result size : 1
 ----------------------------
+"KimKha"
 ---------------------------
 [ Entity Result (end) ]
