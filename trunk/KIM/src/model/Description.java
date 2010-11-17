@@ -3,7 +3,7 @@ package model;
 import org.openrdf.model.URI;
 import org.openrdf.model.Value;
 
-public  class Description {
+public class Description implements Comparable {
 	private String property;
 	private String value;
 	public Description(URI uri, Value value){
@@ -22,5 +22,14 @@ public  class Description {
 	}
 	public String getValue(){
 		return value;
+	}
+
+	@Override
+	public int compareTo(Object arg0) {
+		Description obj = (Description) arg0;
+		if (this.equals(obj)) {
+			return 0;
+		}
+		return -1;
 	}
 }
