@@ -3,7 +3,7 @@ package model;
 import org.openrdf.model.URI;
 import org.openrdf.model.Value;
 
-public abstract class Description {
+public  class Description {
 	private String property;
 	private String value;
 	public Description(URI uri, Value value){

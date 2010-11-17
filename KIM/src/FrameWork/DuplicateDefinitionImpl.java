@@ -27,7 +27,8 @@ public class DuplicateDefinitionImpl implements DuplicateDefinition{
 			if(attr.getLabel() != "label" && attr.getLabel() != "comment"){
 				List<Literal> value = attr.values;
 				for(Literal v : value){
-					Description 
+					Description d = new Description(attr.getLabel().toString(),v.toString());
+					list.add(d);
 				}
 				
 			}
