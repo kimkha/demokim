@@ -6,14 +6,15 @@ import java.util.Map;
 
 import model.Description;
 import model.DupDefPolicy;
-import model.ElementDescription;
+
 import model.KIMEntity;
-import model.RelationDescription;
+
 
 public interface DuplicateDefinition {
 	public void setDupDefFile(File f);
 	public void setDupDefPolicy(DupDefPolicy d);
-	public List<Description> getDescription(KIMEntity e);
-	public List<ElementDescription> getElementDescription(KIMEntity e);
-	public List<RelationDescription> getRelationDescription(KIMEntity e);
+	public List<Description> getElementDescription(KIMEntity e);
+	public List<Description> getRelationDescription(KIMEntity e);
+	public Map<String, Description> getMapEleDescription(KIMEntity e);
+	public Map<String, Description> getMapRelaDescription(KIMEntity e);
 }
