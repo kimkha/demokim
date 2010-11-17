@@ -15,6 +15,8 @@ public  class Description {
 		this.property = property;
 		this.value = value;
 	}
+	
+
 	public String getProperty(){
 		return property;
 	}
