@@ -34,7 +34,7 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 
 	public boolean isDuplicate(KIMEntity e1, KIMEntity e2) {
 		double sim = getSimilarity(e1, e2);
-		if (sim > simThreshold)
+		if (sim > getSimThreshold())
 			return true;
 		return false;
 	}
@@ -62,7 +62,7 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 			for(int j=0; j < eledes2.size(); j++){
 				des2 = eledes2.get(j);
 				double sim = getSim(des1,des2);
-				if( sim  < simThreshold)
+				if( sim  < getSimThreshold())
 				{
 					simNe+= sim*getStrength(des1,des2);
 					set.add(des1);
@@ -189,6 +189,22 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 			List<KIMEntity> liste2) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	public void setValueThreshold(double valueThreshold) {
+		this.valueThreshold = valueThreshold;
+	}
+
+	public double getValueThreshold() {
+		return valueThreshold;
+	}
+
+	public void setSimThreshold(double simThreshold) {
+		this.simThreshold = simThreshold;
+	}
+
+	public double getSimThreshold() {
+		return simThreshold;
 	}
 
 }
