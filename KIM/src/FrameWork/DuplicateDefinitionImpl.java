@@ -11,26 +11,19 @@ import org.openrdf.model.Statement;
 
 import model.Description;
 import model.DupDefPolicy;
-import model.ElementDescription;
 import model.KIMEntity;
-import model.RelationDescription;
+
 
 public class DuplicateDefinitionImpl implements DuplicateDefinition{
 
 	@Override
-	public List<Description> getDescription(KIMEntity e) {
+	public List<Description> getElementDescription(KIMEntity e) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<ElementDescription> getElementDescription(KIMEntity e) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<RelationDescription> getRelationDescription(KIMEntity e) {
+	public List<Description> getRelationDescription(KIMEntity e) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -45,6 +38,18 @@ public class DuplicateDefinitionImpl implements DuplicateDefinition{
 	public void setDupDefPolicy(DupDefPolicy d) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public Map<String, Description> getMapEleDescription(KIMEntity e) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Map<String, Description> getMapRelaDescription(KIMEntity e) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 

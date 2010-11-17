@@ -1,6 +1,6 @@
 package FrameWork;
 
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
@@ -8,7 +8,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-
+import java.util.TreeSet;
+import uk.ac.shef.wit.simmetrics.similaritymetrics.Levenshtein;
 
 import org.apache.xerces.parsers.DOMParser;
 import org.apache.xerces.xni.parser.XMLInputSource;
@@ -19,6 +20,7 @@ import org.xml.sax.SAXException;
 import javax.xml.transform.dom.*;
 import com.ontotext.kim.client.entity.EntityDescriptionImpl;
 
+import model.Description;
 import model.KIMEntity;
 
 public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
@@ -37,17 +39,88 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 		return false;
 	}
 
-	private boolean prun(KIMEntity e1, KIMEntity e2) {
+	private boolean prune(KIMEntity e1, KIMEntity e2) {
 		// TODO Auto-generated method stub
+		// lay cac thuoc tinh / quan he don nhat
+		// kiem tra xem co giong nhau hay khong
+		
 		return false;
 	}
 
 	private double getSimilarity(KIMEntity e1, KIMEntity e2) {
-		// TODO Auto-generated method stub
-		return 0;
+		List<Description> eledes1 = dupdef.getElementDescription(e1);
+		List<Description> relades1 = dupdef.getRelationDescription(e1);
+		List<Description> eledes2 = dupdef.getElementDescription(e2);
+		List<Description> relades2 = dupdef.getRelationDescription(e2);
+		double simNe, difNe, simNr, difNr;
+		simNe = difNe = simNr = difNr = 0;
+		Set set = new TreeSet();
+		Description des1, des2;
+		// find Ne
+		for(int i=0; i < eledes1.size(); i++){
+			des1 = eledes1.get(i);
+			for(int j=0; j < eledes2.size(); j++){
+				des2 = eledes2.get(j);
+				double sim = getSim(des1,des2);
+				if( sim  < simThreshold)
+				{
+					simNe+= sim*getStrength(des1,des2);
+					set.add(des1);
+					set.add(des2);
+				}
+			}	
+		}
+		eledes1.removeAll(set);
+		eledes2.removeAll(set);
+		for(int i=0; i < eledes1.size(); i++){
+			des1 = eledes1.get(i);
+			for(int j=0; j < eledes2.size(); j++){
+				des2 = eledes2.get(j);
+				if(des1.getProperty() == des2.getProperty()){
+					difNe += getStrength(des1,des2);
+					eledes1.remove(i);
+					eledes2.remove(j);
+				}
+			}
+		}
+		for(int i=0; i < relades1.size(); i++){
+			des1 = relades1.get(i);
+			for(int j=0; j < relades2.size(); j++){
+				des2 = relades2.get(j);
+				double sim = getSim(des1,des2);
+				if( sim  == 1)
+				{
+					simNr+= sim*getStrength(des1,des2);
+					set.add(des1);
+					set.add(des2);
+				}
+			}	
+		}
+		relades1.removeAll(set);
+		relades2.removeAll(set);
+		for(int i=0; i < relades1.size(); i++){
+			des1 = relades1.get(i);
+			for(int j=0; j < relades2.size(); j++){
+				des2 = relades2.get(j);
+				if(des1.getProperty() == des2.getProperty()){
+					difNr += getStrength(des1,des2);
+					relades1.remove(i);
+					relades2.remove(j);
+				}
+			}
+		}
+		return (simNe+simNr)/(simNe+simNr+difNe+difNr);
 	}
 
-	private double getSimilarity(Map m1, Map m2) {
+
+	private double getStrength(Description des1, Description des2) {
+		
+		return 1;
+	}
+
+	private double getSim(Description des1, Description des2) {
+		Levenshtein sim = new Levenshtein();
+		sim.getSimilarity(des1.getValue(), des2.getValue());
 		return 0;
 	}
 
