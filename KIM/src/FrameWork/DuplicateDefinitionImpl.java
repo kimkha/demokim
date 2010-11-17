@@ -1,16 +1,19 @@
 package FrameWork;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
 import org.openrdf.model.Graph;
+import org.openrdf.model.Literal;
 import org.openrdf.model.Statement;
 
 import model.Description;
 import model.DupDefPolicy;
+import model.KIMAttribute;
 import model.KIMEntity;
 
 
@@ -18,7 +21,17 @@ public class DuplicateDefinitionImpl implements DuplicateDefinition{
 
 	@Override
 	public List<Description> getElementDescription(KIMEntity e) {
-		// TODO Auto-generated method stub
+		List<Description> list = new ArrayList();
+		List<KIMAttribute> kimAttr =  e.attributes;
+		for(KIMAttribute attr : kimAttr){
+			if(attr.getLabel() != "label" && attr.getLabel() != "comment"){
+				List<Literal> value = attr.values;
+				for(Literal v : value){
+					Description 
+				}
+				
+			}
+		}
 		return null;
 	}
 

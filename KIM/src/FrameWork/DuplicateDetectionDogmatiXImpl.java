@@ -119,9 +119,18 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 	}
 
 	private double getSim(Description des1, Description des2) {
-		Levenshtein sim = new Levenshtein();
-		sim.getSimilarity(des1.getValue(), des2.getValue());
-		return 0;
+		if(!isComparable(des1.getProperty(),des2.getProperty())){
+			return 1;
+		}else{
+			Levenshtein sim = new Levenshtein();
+			return sim.getSimilarity(des1.getValue(), des2.getValue());
+		}
+		
+	}
+
+	private boolean isComparable(String property, String property2) {
+		// TODO Auto-generated method stub
+		return (property == property2);
 	}
 
 	@Override
