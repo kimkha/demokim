@@ -2,26 +2,18 @@ package FrameWork;
 
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
-import uk.ac.shef.wit.simmetrics.similaritymetrics.Levenshtein;
-
-import org.apache.xerces.parsers.DOMParser;
-import org.apache.xerces.xni.parser.XMLInputSource;
-import org.openrdf.model.URI;
-import org.w3c.dom.*;
-import org.xml.sax.SAXException;
-
-import javax.xml.transform.dom.*;
-import com.ontotext.kim.client.entity.EntityDescriptionImpl;
 
 import model.Description;
 import model.KIMEntity;
+
+import org.openrdf.model.URI;
+
+import uk.ac.shef.wit.simmetrics.similaritymetrics.Levenshtein;
 
 public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 
@@ -31,7 +23,7 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 	private double simThreshold; // for entity
 
 	
-
+	@Override
 	public boolean isDuplicate(KIMEntity e1, KIMEntity e2) {
 		double sim = getSimilarity(e1, e2);
 		if (sim > getSimThreshold())
@@ -47,14 +39,15 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 		return false;
 	}
 
-	private double getSimilarity(KIMEntity e1, KIMEntity e2) {
-		List<Description> eledes1 = dupdef.getElementDescription(e1);
-		List<Description> relades1 = dupdef.getRelationDescription(e1);
-		List<Description> eledes2 = dupdef.getElementDescription(e2);
-		List<Description> relades2 = dupdef.getRelationDescription(e2);
+	@Override
+	public double getSimilarity(KIMEntity e1, KIMEntity e2) {
+		List<Description> eledes1 = getDupdef().getElementDescription(e1);
+		List<Description> relades1 = getDupdef().getRelationDescription(e1);
+		List<Description> eledes2 = getDupdef().getElementDescription(e2);
+		List<Description> relades2 = getDupdef().getRelationDescription(e2);
 		double simNe, difNe, simNr, difNr;
 		simNe = difNe = simNr = difNr = 0;
-		Set<Description> set = new TreeSet<Description>();
+		List<Description> set = new ArrayList<Description>();
 		Description des1, des2;
 		// find Ne
 		for(int i=0; i < eledes1.size(); i++){
@@ -62,11 +55,14 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 			for(int j=0; j < eledes2.size(); j++){
 				des2 = eledes2.get(j);
 				double sim = getSim(des1,des2);
-				if( sim  < getSimThreshold())
+				if(sim >= getSimThreshold())
 				{
-					simNe+= sim*getStrength(des1,des2);
-					set.add(des1);
-					set.add(des2);
+					simNe+= getStrength(des1,des2);
+					if(!set.contains(des1))
+						set.add(des1);
+					if(!set.contains(des2))
+						set.add(des2);
+					
 				}
 			}	
 		}
@@ -76,23 +72,26 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 			des1 = eledes1.get(i);
 			for(int j=0; j < eledes2.size(); j++){
 				des2 = eledes2.get(j);
-				if(des1.getProperty() == des2.getProperty()){
+				if(des1.getProperty().equals(des2.getProperty())){
 					difNe += getStrength(des1,des2);
-					eledes1.remove(i);
-					eledes2.remove(j);
+					eledes1.remove(des1);
+					eledes2.remove(des2);
 				}
 			}
 		}
+		set = new ArrayList<Description>();
 		for(int i=0; i < relades1.size(); i++){
 			des1 = relades1.get(i);
 			for(int j=0; j < relades2.size(); j++){
 				des2 = relades2.get(j);
 				double sim = getSim(des1,des2);
-				if( sim  == 1)
+				if(des1.getValue().equals(des2.getValue()))
 				{
-					simNr+= sim*getStrength(des1,des2);
-					set.add(des1);
-					set.add(des2);
+					simNr+= getStrength(des1,des2);
+					if(!set.contains(des1))
+						set.add(des1);
+					if(!set.contains(des2))
+						set.add(des2);
 				}
 			}	
 		}
@@ -120,7 +119,7 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 
 	private double getSim(Description des1, Description des2) {
 		if(!isComparable(des1.getProperty(),des2.getProperty())){
-			return 1;
+			return 0;
 		}else{
 			Levenshtein sim = new Levenshtein();
 			return sim.getSimilarity(des1.getValue(), des2.getValue());
@@ -130,13 +129,13 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 
 	private boolean isComparable(String property, String property2) {
 		// TODO Auto-generated method stub
-		return (property == property2);
+		return (property.equals(property2));
 	}
 
 	@Override
 	public KIMEntity getDuplicate(KIMEntity e) {
 		// liet ke tat ca thuc the can so sanh -- candef.listCandidate(e)
-		List<URI> candidatesList = candef.listCandidate(e);
+		List<URI> candidatesList = getCandef().listCandidate(e);
 		// so sanh tung cap thuc the -- isDuplicate(KIMEntity e1, KIMEntity e2);
 		for (URI uri : candidatesList) {
 			KIMEntity e2 = new KIMEntity(uri);
@@ -151,7 +150,7 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 
 	@Override
 	public List<Set<KIMEntity>> getDuplicateClus() {
-		List<URI> listCandidate = candef.listCandidate();
+		List<URI> listCandidate = getCandef().listCandidate();
 		List<Set<KIMEntity>> clus = new ArrayList<Set<KIMEntity>>();
 		Iterator<URI> it1 = listCandidate.iterator();	
 		Iterator<URI> it2 = listCandidate.iterator();
@@ -191,20 +190,44 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 		return null;
 	}
 
+	@Override
 	public void setValueThreshold(double valueThreshold) {
 		this.valueThreshold = valueThreshold;
 	}
 
+	@Override
 	public double getValueThreshold() {
 		return valueThreshold;
 	}
 
+	@Override
 	public void setSimThreshold(double simThreshold) {
 		this.simThreshold = simThreshold;
 	}
 
+	@Override
 	public double getSimThreshold() {
 		return simThreshold;
+	}
+
+	@Override
+	public void setCandef(CandidateDefinition candef) {
+		this.candef = candef;
+	}
+
+	@Override
+	public CandidateDefinition getCandef() {
+		return candef;
+	}
+
+	@Override
+	public void setDupdef(DuplicateDefinition dupdef) {
+		this.dupdef = dupdef;
+	}
+
+	@Override
+	public DuplicateDefinition getDupdef() {
+		return dupdef;
 	}
 
 }

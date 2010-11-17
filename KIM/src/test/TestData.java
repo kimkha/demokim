@@ -11,9 +11,10 @@ import com.ontotext.kim.client.semanticrepository.SemanticRepositoryException;
 
 public class TestData {
 	public static void importData() {
+
 		EntityDescriptionImpl e1 = new EntityDescriptionImpl(new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#kha"));
 		e1.addAttribute(new URIImpl("http://www.w3.org/2000/01/rdf-schema#label"), new LiteralImpl("kha"));
-		e1.addAttribute(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new LiteralImpl("man"));
+		e1.addRelation(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new URIImpl("http://proton.semanticweb.org/2006/05/protonu#Man"));
 		e1.addAttribute(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasAlias"), new LiteralImpl("Nguyen Kim Kha"));
 		e1.addRelation(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasWife"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#suong"));
 		e1.addRelation(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasBoss"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#nguyen"));
@@ -36,14 +37,14 @@ public class TestData {
 		e1.addAttribute(new URIImpl("http://proton.semanticweb.org/2006/05/protons#department"), new LiteralImpl("May tinh"));
 		e1.addAttribute(new URIImpl("http://proton.semanticweb.org/2006/05/protons#company"), new LiteralImpl("Qhoach"));
 		try {
-			KIMAPI.getEntApi().addEntityDescription(e1);
+		KIMAPI.getEntApi().addEntityDescription(e1);
 		}
 		catch (SemanticRepositoryException ex1) {
-			ex1.printStackTrace();
+		ex1.printStackTrace();
 		}
 		EntityDescriptionImpl e2 = new EntityDescriptionImpl(new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#suong"));
 		e2.addAttribute(new URIImpl("http://www.w3.org/2000/01/rdf-schema#label"), new LiteralImpl("suong"));
-		e2.addAttribute(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new LiteralImpl("woman"));
+		e2.addRelation(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#Woman"));
 		e2.addAttribute(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasAlias"), new LiteralImpl("Dang Thi Thu Suong"));
 		e2.addRelation(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasHusband"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#kha"));
 		e2.addRelation(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasBrother"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#tam"));
@@ -68,7 +69,7 @@ public class TestData {
 		}
 		EntityDescriptionImpl e3 = new EntityDescriptionImpl(new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#nguyen"));
 		e3.addAttribute(new URIImpl("http://www.w3.org/2000/01/rdf-schema#label"), new LiteralImpl("nguyen"));
-		e3.addAttribute(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new LiteralImpl("man"));
+		e3.addRelation(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#Man"));
 		e3.addAttribute(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasAlias"), new LiteralImpl("Le Dang Nguyen"));
 		e3.addRelation(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasWife"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#na"));
 		e3.addAttribute(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasNationlaty"), new LiteralImpl("vietnam"));
@@ -87,7 +88,7 @@ public class TestData {
 		}
 		EntityDescriptionImpl e4 = new EntityDescriptionImpl(new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#na"));
 		e4.addAttribute(new URIImpl("http://www.w3.org/2000/01/rdf-schema#label"), new LiteralImpl("na"));
-		e4.addAttribute(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new LiteralImpl("woman"));
+		e4.addRelation(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#Woman"));
 		e4.addAttribute(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasAlias"), new LiteralImpl("Le Na"));
 		e4.addRelation(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasHusband"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#nguyen"));
 		e4.addRelation(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasBoss"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#nguyen"));
@@ -107,7 +108,7 @@ public class TestData {
 		}
 		EntityDescriptionImpl e5 = new EntityDescriptionImpl(new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#luan"));
 		e5.addAttribute(new URIImpl("http://www.w3.org/2000/01/rdf-schema#label"), new LiteralImpl("luan"));
-		e5.addAttribute(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new LiteralImpl("man"));
+		e5.addRelation(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#Man"));
 		e5.addAttribute(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasAlias"), new LiteralImpl("Mai Thanh Luan"));
 		e5.addRelation(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasFriend"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#kha"));
 		e5.addRelation(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasFriend"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#suong"));
@@ -129,7 +130,7 @@ public class TestData {
 		}
 		EntityDescriptionImpl e6 = new EntityDescriptionImpl(new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#trang"));
 		e6.addAttribute(new URIImpl("http://www.w3.org/2000/01/rdf-schema#label"), new LiteralImpl("trang"));
-		e6.addAttribute(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new LiteralImpl("woman"));
+		e6.addRelation(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#Woman"));
 		e6.addAttribute(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasAlias"), new LiteralImpl("Tran Thi Thu Trang"));
 		e6.addRelation(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasBoss"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#dung"));
 		e6.addRelation(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasBrother"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#hoang"));
@@ -154,7 +155,7 @@ public class TestData {
 		}
 		EntityDescriptionImpl e7 = new EntityDescriptionImpl(new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#nghi"));
 		e7.addAttribute(new URIImpl("http://www.w3.org/2000/01/rdf-schema#label"), new LiteralImpl("nghi"));
-		e7.addAttribute(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new LiteralImpl("man"));
+		e7.addRelation(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#Man"));
 		e7.addAttribute(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasAlias"), new LiteralImpl("Nguyen Viet Nghi"));
 		e7.addRelation(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasWife"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#tuyen"));
 		e7.addRelation(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasFriend"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#kha"));
@@ -175,7 +176,7 @@ public class TestData {
 		}
 		EntityDescriptionImpl e8 = new EntityDescriptionImpl(new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#tuyen"));
 		e8.addAttribute(new URIImpl("http://www.w3.org/2000/01/rdf-schema#label"), new LiteralImpl("tuyen"));
-		e8.addAttribute(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new LiteralImpl("woman"));
+		e8.addRelation(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#Woman"));
 		e8.addAttribute(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasAlias"), new LiteralImpl("Nguyen Thi Kim Tuyen"));
 		e8.addRelation(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasHusband"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#nghi"));
 		e8.addRelation(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasFriend"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#kha"));
@@ -197,7 +198,7 @@ public class TestData {
 		}
 		EntityDescriptionImpl e9 = new EntityDescriptionImpl(new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#tai"));
 		e9.addAttribute(new URIImpl("http://www.w3.org/2000/01/rdf-schema#label"), new LiteralImpl("tai"));
-		e9.addAttribute(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new LiteralImpl("man"));
+		e9.addRelation(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#Man"));
 		e9.addAttribute(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasAlias"), new LiteralImpl("Ta Tat Tai"));
 		e9.addRelation(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasFriend"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#kha"));
 		e9.addRelation(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasFriend"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#nghi"));
@@ -216,7 +217,7 @@ public class TestData {
 		}
 		EntityDescriptionImpl e10 = new EntityDescriptionImpl(new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#dieu"));
 		e10.addAttribute(new URIImpl("http://www.w3.org/2000/01/rdf-schema#label"), new LiteralImpl("dieu"));
-		e10.addAttribute(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new LiteralImpl("woman"));
+		e10.addRelation(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#Woman"));
 		e10.addAttribute(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasAlias"), new LiteralImpl("Dam Thi Dieu"));
 		e10.addRelation(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasHusband"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#tri"));
 		e10.addRelation(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasFriend"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#kha"));
@@ -237,7 +238,7 @@ public class TestData {
 		}
 		EntityDescriptionImpl e11 = new EntityDescriptionImpl(new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#tri"));
 		e11.addAttribute(new URIImpl("http://www.w3.org/2000/01/rdf-schema#label"), new LiteralImpl("tri"));
-		e11.addAttribute(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new LiteralImpl("man"));
+		e11.addRelation(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#Man"));
 		e11.addAttribute(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasAlias"), new LiteralImpl("Nguyen Dac Tri"));
 		e11.addRelation(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasWife"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#dieu"));
 		e11.addRelation(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasFriend"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#kha"));
@@ -256,7 +257,7 @@ public class TestData {
 		}
 		EntityDescriptionImpl e12 = new EntityDescriptionImpl(new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#khanh"));
 		e12.addAttribute(new URIImpl("http://www.w3.org/2000/01/rdf-schema#label"), new LiteralImpl("khanh"));
-		e12.addAttribute(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new LiteralImpl("man"));
+		e12.addRelation(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#Man"));
 		e12.addAttribute(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasAlias"), new LiteralImpl("Nguyen Kim Khanh"));
 		e12.addRelation(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasBoss"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#minh"));
 		e12.addRelation(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasBrother"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#kha"));
@@ -278,7 +279,7 @@ public class TestData {
 		}
 		EntityDescriptionImpl e13 = new EntityDescriptionImpl(new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#khue"));
 		e13.addAttribute(new URIImpl("http://www.w3.org/2000/01/rdf-schema#label"), new LiteralImpl("khue"));
-		e13.addAttribute(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new LiteralImpl("woman"));
+		e13.addRelation(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#Woman"));
 		e13.addAttribute(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasAlias"), new LiteralImpl("Nguyen Thi Kim Khue"));
 		e13.addRelation(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasBrother"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#kha"));
 		e13.addRelation(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasBrother"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#khanh"));
@@ -298,7 +299,7 @@ public class TestData {
 		}
 		EntityDescriptionImpl e14 = new EntityDescriptionImpl(new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#hien"));
 		e14.addAttribute(new URIImpl("http://www.w3.org/2000/01/rdf-schema#label"), new LiteralImpl("hien"));
-		e14.addAttribute(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new LiteralImpl("woman"));
+		e14.addRelation(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#Woman"));
 		e14.addAttribute(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasAlias"), new LiteralImpl("Nguyen Thi Ngoc Hien"));
 		e14.addRelation(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasFriend"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#kha"));
 		e14.addRelation(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasFriend"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#suong"));
@@ -319,7 +320,7 @@ public class TestData {
 		}
 		EntityDescriptionImpl e15 = new EntityDescriptionImpl(new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#hoang"));
 		e15.addAttribute(new URIImpl("http://www.w3.org/2000/01/rdf-schema#label"), new LiteralImpl("hoang"));
-		e15.addAttribute(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new LiteralImpl("man"));
+		e15.addRelation(new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#Man"));
 		e15.addAttribute(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasAlias"), new LiteralImpl("Tran Minh Hoang"));
 		e15.addRelation(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasSister"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#trang"));
 		e15.addRelation(new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasFriend"), new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#kha"));
@@ -336,7 +337,7 @@ public class TestData {
 		catch (SemanticRepositoryException ex15) {
 		ex15.printStackTrace();
 		}
-	}
+		}
 	
 	public static EntityDescription getTest1() {
 		EntityDescriptionImpl e1 = new EntityDescriptionImpl(new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#kha1"));
