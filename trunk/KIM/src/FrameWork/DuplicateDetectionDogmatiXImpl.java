@@ -54,7 +54,7 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 		List<Description> relades2 = dupdef.getRelationDescription(e2);
 		double simNe, difNe, simNr, difNr;
 		simNe = difNe = simNr = difNr = 0;
-		Set set = new TreeSet();
+		Set<Description> set = new TreeSet<Description>();
 		Description des1, des2;
 		// find Ne
 		for(int i=0; i < eledes1.size(); i++){
@@ -152,7 +152,7 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 	@Override
 	public List<Set<KIMEntity>> getDuplicateClus() {
 		List<URI> listCandidate = candef.listCandidate();
-		List clus = new ArrayList();
+		List<Set<KIMEntity>> clus = new ArrayList<Set<KIMEntity>>();
 		Iterator<URI> it1 = listCandidate.iterator();	
 		Iterator<URI> it2 = listCandidate.iterator();
 		while(it1.hasNext()){
@@ -162,7 +162,7 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 				e1.extract();
 				e2.extract();
 				if(isDuplicate(e1,e2)){
-					 Set set = new HashSet();
+					 Set<KIMEntity> set = new HashSet<KIMEntity>();
 					 set.add(e1);
 					 set.add(e2);
 					 clus.add(set);
