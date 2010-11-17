@@ -15,6 +15,7 @@ import model.Description;
 import model.DupDefPolicy;
 import model.KIMAttribute;
 import model.KIMEntity;
+import model.KIMRelation;
 
 
 public class DuplicateDefinitionImpl implements DuplicateDefinition{
@@ -33,13 +34,33 @@ public class DuplicateDefinitionImpl implements DuplicateDefinition{
 				
 			}
 		}
-		return null;
+		List<KIMRelation> kimRelation = e.relations;
+		for(KIMRelation rela :kimRelation){
+			if(rela.getLabel() == "hasAlias"){
+				List<KIMEntity> listobj = rela.listobj;
+				for(KIMEntity e1: listobj){
+					Description d = new Description(rela.getLabel(),e1.getMainLabel().toString());
+					list.add(d);
+				}
+			}
+		}
+		return list;
 	}
 
 	@Override
 	public List<Description> getRelationDescription(KIMEntity e) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Description> list = new ArrayList();
+		List<KIMRelation> kimRela = e.relations;
+		for(KIMRelation rela: kimRela){
+			if(rela.getLabel() != "hasAlias"){
+				List<KIMEntity> listobj = rela.listobj;
+				for(KIMEntity k : listobj){
+					Description d = new Description(rela.getLabel(),k.res.toString());
+					list.add(d);
+				}
+			}
+		}
+		return list;
 	}
 
 	@Override
