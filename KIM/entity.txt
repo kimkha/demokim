@@ -1,6 +1,6 @@
 [ Entity Result (begin) ]
 Entity Result size : 1
 ----------------------------
-"KimKha"
+"Thu Suong"
 ---------------------------
 [ Entity Result (end) ]
