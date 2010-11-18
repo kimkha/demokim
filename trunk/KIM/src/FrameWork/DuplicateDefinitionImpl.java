@@ -25,7 +25,7 @@ public class DuplicateDefinitionImpl implements DuplicateDefinition{
 		List<Description> list = new ArrayList<Description>();
 		List<KIMAttribute> kimAttr =  e.attributes;
 		for(KIMAttribute attr : kimAttr){
-			if(attr.getLabel() != "comment"){
+			if(attr.getLabel() != "comment" && !attr.isFunctional()){
 				List<Literal> value = attr.values;
 				for(Literal v : value){
 					Description d = new Description(attr.getLabel().toString(),v.toString());
@@ -36,7 +36,7 @@ public class DuplicateDefinitionImpl implements DuplicateDefinition{
 		}
 		List<KIMRelation> kimRelation = e.relations;
 		for(KIMRelation rela :kimRelation){
-			if(rela.getLabel() == "hasAlias"){
+			if(rela.getLabel() == "hasAlias" && !rela.isFunctional()){
 				List<KIMEntity> listobj = rela.listobj;
 				for(KIMEntity e1: listobj){
 					Description d = new Description(rela.getLabel(),e1.getMainLabel().toString());
