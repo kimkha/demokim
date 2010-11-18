@@ -22,7 +22,7 @@ public class CandidateDefinitionImpl implements CandidateDefinition{
 		if(candidateDefFile == null){
 			// truy van cac thuc the cung lop
 			Resource kimClass = e.getKIMClass().res;
-			List<URI> listcan = new ArrayList();
+			List<URI> listcan = new ArrayList<URI>();
 			Iterator<URI> itcan = KIMAPI.getAllEntityURIInClass(kimClass);
 			while(itcan.hasNext()){
 				listcan.add(itcan.next());

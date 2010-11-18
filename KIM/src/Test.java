@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Set;
 
 import org.openrdf.model.impl.LiteralImpl;
 import org.openrdf.model.impl.URIImpl;
@@ -17,6 +18,7 @@ import com.ontotext.kim.client.query.KIMQueryException;
 import com.ontotext.kim.client.query.SemanticQuery;
 
 import test.TestData;
+import tool.ConfigFile;
 import tool.KIMAPI;
 
 
@@ -26,6 +28,11 @@ public class Test {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		// Load default config...
+		Set<String> keys = ConfigFile.getListClass();
+
+		System.out.println(ConfigFile.getElementsByClass(keys.iterator().toString()));
+		/*
 		KIMAPI.start();
 		//TestData.importData();
 
@@ -84,7 +91,7 @@ public class Test {
 			e.printStackTrace();
 		}
 		
-		System.out.println("End");
+		System.out.println("End");/**/
 	}
 
 }
