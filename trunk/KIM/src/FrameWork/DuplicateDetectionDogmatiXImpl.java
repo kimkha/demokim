@@ -12,7 +12,12 @@ import model.Description;
 import model.KIMEntity;
 
 import org.openrdf.model.URI;
+import org.openrdf.model.impl.LiteralImpl;
+import org.openrdf.model.impl.URIImpl;
 
+import com.ontotext.kim.client.model.WKBConstants;
+
+import tool.KIMAPI;
 import uk.ac.shef.wit.simmetrics.similaritymetrics.Levenshtein;
 
 public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
@@ -113,6 +118,7 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 
 
 	private double getStrength(Description des1, Description des2) {
+		//return KIMAPI.getSemRepoApi().getStatementsCount(new URIImpl(WKBConstants.CLASS_LOCATION), new URIImpl(WKBConstants.PROPERTY_LONGITUDE), new LiteralImpl(""), true);
 		
 		return 1;
 	}
