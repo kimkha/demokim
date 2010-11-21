@@ -150,4 +150,29 @@ public class KIMAPI {
 		}*/
 		return null;
 	}
+	
+	public static Iterator<URI> getAllEntityURIInClass(String kimClass) {
+		try {
+			ClosableIterator<URI> ci = semRepoApi.getInstances(new URIImpl(kimClass));
+			return ci;
+		} catch (SemanticRepositoryException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		/*SemanticQuery seq = new SemanticQuery();
+		List<URI> list = new ArrayList<URI>();
+		try {
+			seq.addRequestedVar("KIMCLASSS");
+			seq.setClass("KIMCLASS", kimClass.toString());
+			SemanticQueryResult resEntities = getQueryApi().getEntities(seq);
+			for (SemanticQueryResultRow row : resEntities) {
+				list.add(new URIImpl(row.get(0).toString()));
+			}
+			return list;
+		} catch (KIMQueryException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+		return null;
+	}
 }
