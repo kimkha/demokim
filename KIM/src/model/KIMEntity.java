@@ -124,8 +124,18 @@ public class KIMEntity extends KIMResource implements EntityDescription{
 				KIMRelation rela = relations.get(i);
 				str += "( " + rela.getLabel();
 				List<KIMEntity> listObject = rela.listobj;
-				for(int j=0; j < listObject.size(); j++)
-					str += ',' + listObject.get(j).res.toString();
+				if(rela.getLabel().equals("hasAlias") || rela.getLabel().equals("hasMainAlias")){
+					for(int j=0; j < listObject.size(); j++)
+						{
+						listObject.get(j).extract();
+						str += ','+ listObject.get(j).getMainLabel().toString();
+						}
+				}
+				else{
+					for(int j=0; j < listObject.size(); j++)
+						str += ',' + listObject.get(j).res.toString();
+				}
+				
 				str += ")\n";
 			}
 			return str;
