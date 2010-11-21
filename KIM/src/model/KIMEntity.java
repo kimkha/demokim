@@ -15,6 +15,8 @@ import tool.KIMAPI;
 
 import com.ontotext.kim.client.entity.EntityDescription;
 import com.ontotext.kim.client.query.KIMQueryException;
+import com.ontotext.kim.client.semanticrepository.ClosableIterator;
+import com.ontotext.kim.client.semanticrepository.SemanticRepositoryException;
 
 public class KIMEntity extends KIMResource implements EntityDescription{
 
@@ -73,6 +75,8 @@ public class KIMEntity extends KIMResource implements EntityDescription{
 	}
 
 	public Literal getMainLabel() {
+		if(!isExtracted)
+			extract();
 		return entdes.getMainLabel();
 	}
 
@@ -90,7 +94,17 @@ public class KIMEntity extends KIMResource implements EntityDescription{
 	}
 
 	public KIMClass getKIMClass() {
-		return null;
+		KIMClass kimClass = null;
+		try {
+			ClosableIterator<Resource> cl = KIMAPI.getSemRepoApi().getDirectClasses(res);
+			Resource res = cl.next();
+			kimClass = new KIMClass(res);
+			
+		} catch (SemanticRepositoryException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return kimClass;
 	}
 
 	public String getFullInfo() {
