@@ -1,3 +1,4 @@
+package hcmut.kim;
 import hcmut.kim.FrameWork.CandidateDefinitionImpl;
 import hcmut.kim.FrameWork.DuplicateDefinitionImpl;
 import hcmut.kim.FrameWork.DuplicateDetection;

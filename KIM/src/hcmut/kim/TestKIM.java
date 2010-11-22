@@ -1,3 +1,4 @@
+package hcmut.kim;
 import hcmut.kim.model.KIMEntity;
 import hcmut.kim.tool.KIMAPI;
 import hcmut.kim.tool.parser.RDFFile;
