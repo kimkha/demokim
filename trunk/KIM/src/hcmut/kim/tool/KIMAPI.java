@@ -45,9 +45,7 @@ public class KIMAPI {
 			setSemRepoApi(service
 					.getSemanticRepositoryAPI());
 			setOnto(ontoApi.getOntology());
-		} catch (RemoteException e) {
-			e.printStackTrace();
-		} catch (NotBoundException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}

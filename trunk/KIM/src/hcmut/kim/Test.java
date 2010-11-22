@@ -30,47 +30,47 @@ import com.ontotext.kim.client.query.SemanticQuery;
 
 public class Test {
 
-	/**
-	 * @param args
-	 * @throws IOException 
-	 */
-	public static void main(String[] args) throws IOException {
-		// Load default config...
-		/*
-		Set<String> keys = ConfigFile.getListClass();
-
-		System.out.println(ConfigFile.getElementsByClass(keys.iterator().toString()));
-		/**/
-		
-		KIMAPI.start();
-		//TestData.importData();
-
-		SemanticQuery seq1 = new SemanticQuery();
-		FileWriter file = new FileWriter("country.txt");
-		try {
-			seq1.addRequestedVar("PERS");
-			seq1.setClass("PERS", WKBConstants.CLASS_MAN);
-//			seq1.addNameRestriction("PERS",
-//					CompareStyleConstants.COMPARE_STYLE_CONTAINS, "kha");
-			Iterator<URI> listEntities = KIMAPI.getAllEntityURIInClass(WKBConstants.CLASS_COUNTRY);
-			int i=0;
-			while(listEntities.hasNext()){
-				i++;
-				KIMEntity e = new KIMEntity(listEntities.next());
-				e.extract();
-				file.write(e.getFullInfo());
-				file.write("\n----------------------\n");
-			}
-			file.write("No of Entities : " + i);
-			file.write("END");
-			file.close();
-			
-		} catch (KIMQueryException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		System.out.println("End");/**/
-	}
+//	/**
+//	 * @param args
+//	 * @throws IOException 
+//	 */
+//	public static void main(String[] args) throws IOException {
+//		// Load default config...
+//		/*
+//		Set<String> keys = ConfigFile.getListClass();
+//
+//		System.out.println(ConfigFile.getElementsByClass(keys.iterator().toString()));
+//		/**/
+//		
+//		KIMAPI.start();
+//		//TestData.importData();
+//
+//		SemanticQuery seq1 = new SemanticQuery();
+//		FileWriter file = new FileWriter("country.txt");
+//		try {
+//			seq1.addRequestedVar("PERS");
+//			seq1.setClass("PERS", WKBConstants.CLASS_MAN);
+////			seq1.addNameRestriction("PERS",
+////					CompareStyleConstants.COMPARE_STYLE_CONTAINS, "kha");
+//			Iterator<URI> listEntities = KIMAPI.getAllEntityURIInClass(WKBConstants.CLASS_COUNTRY);
+//			int i=0;
+//			while(listEntities.hasNext()){
+//				i++;
+//				KIMEntity e = new KIMEntity(listEntities.next());
+//				e.extract();
+//				file.write(e.getFullInfo());
+//				file.write("\n----------------------\n");
+//			}
+//			file.write("No of Entities : " + i);
+//			file.write("END");
+//			file.close();
+//			
+//		} catch (KIMQueryException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		
+//		System.out.println("End");/**/
+//	}
 
 }
