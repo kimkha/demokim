@@ -1,9 +1,0 @@
-Person:
-- hasChild: 0.5
-- name: 0.5
-
-Man:
-- hasWife: 0.9
-
-Woman:
-- hasHusband:0.9
