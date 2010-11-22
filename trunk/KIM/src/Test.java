@@ -1,3 +1,12 @@
+import hcmut.kim.FrameWork.CandidateDefinitionImpl;
+import hcmut.kim.FrameWork.DuplicateDefinitionImpl;
+import hcmut.kim.FrameWork.DuplicateDetection;
+import hcmut.kim.FrameWork.DuplicateDetectionDogmatiXImpl;
+import hcmut.kim.model.KIMEntity;
+import hcmut.kim.test.TestData;
+import hcmut.kim.tool.ConfigFile;
+import hcmut.kim.tool.KIMAPI;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Iterator;
@@ -8,12 +17,7 @@ import org.openrdf.model.URI;
 import org.openrdf.model.impl.LiteralImpl;
 import org.openrdf.model.impl.URIImpl;
 
-import model.KIMEntity;
 
-import FrameWork.CandidateDefinitionImpl;
-import FrameWork.DuplicateDefinitionImpl;
-import FrameWork.DuplicateDetection;
-import FrameWork.DuplicateDetectionDogmatiXImpl;
 
 import com.ontotext.kim.client.CompareStyleConstants;
 import com.ontotext.kim.client.entity.EntityDescriptionImpl;
@@ -21,9 +25,6 @@ import com.ontotext.kim.client.model.WKBConstants;
 import com.ontotext.kim.client.query.KIMQueryException;
 import com.ontotext.kim.client.query.SemanticQuery;
 
-import test.TestData;
-import tool.ConfigFile;
-import tool.KIMAPI;
 
 
 public class Test {

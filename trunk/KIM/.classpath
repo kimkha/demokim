@@ -170,5 +170,7 @@
 			<attribute name="javadoc_location" value="jar:platform:/resource/KIM/war/WEB-INF/lib/snakeyaml-1.7-javadoc.jar!/"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
+	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

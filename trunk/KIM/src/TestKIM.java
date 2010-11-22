@@ -1,14 +1,15 @@
+import hcmut.kim.model.KIMEntity;
+import hcmut.kim.tool.KIMAPI;
+import hcmut.kim.tool.parser.RDFFile;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
-import model.KIMEntity;
 
 import org.openrdf.model.impl.LiteralImpl;
 import org.openrdf.model.impl.URIImpl;
 
-import tool.KIMAPI;
-import tool.parser.RDFFile;
 
 import com.ontotext.kim.client.CompareStyleConstants;
 import com.ontotext.kim.client.entity.EntityDescriptionImpl;
