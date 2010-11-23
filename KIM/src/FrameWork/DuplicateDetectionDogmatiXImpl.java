@@ -90,7 +90,7 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 			for(int j=0; j < relades2.size(); j++){
 				des2 = relades2.get(j);
 				double sim = getSim(des1,des2);
-				if(des1.getValue().equals(des2.getValue()))
+				if(sim==1)
 				{
 					simNr+= getStrength(des1,des2);
 					if(!set.contains(des1))
@@ -102,14 +102,19 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 		}
 		relades1.removeAll(set);
 		relades2.removeAll(set);
-		for(int i=0; i < relades1.size(); i++){
-			des1 = relades1.get(i);
-			for(int j=0; j < relades2.size(); j++){
-				des2 = relades2.get(j);
-				if(des1.getProperty() == des2.getProperty()){
+		Iterator<Description> it1 = relades1.iterator();
+		while(it1.hasNext()){
+			des1 = it1.next();
+			Iterator<Description> it2 = relades2.iterator();
+			while(it2.hasNext()){
+				
+				des2 = it2.next();
+				if(des1.getProperty().equals(des2.getProperty())){
 					difNr += getStrength(des1,des2);
-					relades1.remove(i);
-					relades2.remove(j);
+					if(it1.hasNext())
+						it1.next();
+					relades2.remove(des2);
+					it2 = relades2.iterator();
 				}
 			}
 		}

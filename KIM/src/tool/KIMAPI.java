@@ -128,8 +128,7 @@ public class KIMAPI {
 
 	public static Iterator<URI> getAllEntityURIInClass(Resource kimClass) {
 		try {
-			ClosableIterator<URI> ci = semRepoApi.getInstances(kimClass);
-			return ci;
+			return semRepoApi.getInstances(kimClass);
 		} catch (SemanticRepositoryException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

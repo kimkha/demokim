@@ -14,6 +14,7 @@ import org.openrdf.model.impl.URIImpl;
 
 import com.ontotext.kim.client.entity.EntityDescription;
 import com.ontotext.kim.client.entity.EntityDescriptionImpl;
+import com.ontotext.kim.client.model.WKBConstants;
 
 public class ReadXML {
 	@SuppressWarnings("unchecked")
@@ -30,18 +31,25 @@ public class ReadXML {
 			for (int j=0; j<attributes.size(); j++) {
 				Element attr = attributes.get(j);
 				String name = attr.getName().toLowerCase();
+				int k=1;
 				if ("label".equals(name)) {
 					e.addAttribute(
 							new URIImpl("http://www.w3.org/2000/01/rdf-schema#label"), 
 							new LiteralImpl(attr.getValue()));
 				} else if ("hasalias".equals(name)) {
-					e.addAttribute(
-							new URIImpl("http://proton.semanticweb.org/2006/05/protons#hasAlias"), 
-							new LiteralImpl(attr.getValue()));
-				} else if ("type".equals(name)) {
-					e.addAttribute(
+					EntityDescriptionImpl en = new EntityDescriptionImpl(
+							new URIImpl("http://www.ontotext.com/kim/2006/05/wkb#Country_C"+(i+1)+"."+k));
+					en.addRelation(
 							new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), 
-							new LiteralImpl(attr.getValue()));
+							new URIImpl(WKBConstants.CLASS_ALIAS));
+					k++;
+					e.addRelation(
+							new URIImpl(WKBConstants.PROPERTY_HAS_ALIAS), 
+							en.getResource());
+				} else if ("type".equals(name)) {
+					e.addRelation(
+							new URIImpl("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), 
+							new URIImpl(attr.getValue()));
 				} else if (!"hasmainalias".equals(name)) {
 					if (isRelation(attr.getValue())) {
 						e.addRelation(
