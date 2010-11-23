@@ -8,7 +8,7 @@ import java.util.List;
 import model.KIMEntity;
 
 public class CountryXML {
-	List<KIMEntity> list = new ArrayList<KIMEntity>();
+	private List<KIMEntity> list = new ArrayList<KIMEntity>();
 	public void saveToXML(String filename) throws IOException {
 		FileWriter file = new FileWriter(filename);
 		file.write("<?xml version=\"1.0\"?>\n<Countries>\n");
