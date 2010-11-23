@@ -41,22 +41,13 @@ public class Test {
 		
 		KIMAPI.start();
 		//TestData.importData();
-		/*
-		CountryXML xml = new CountryXML();
-
-		Iterator<URI> listEntities = KIMAPI.getAllEntityURIInClass(WKBConstants.CLASS_COUNTRY);
-		int i=0;
-		while(listEntities.hasNext()){
-			i++;
-			KIMEntity e = new KIMEntity(listEntities.next());
-			e.extract();
-			xml.addEntity(e);
-		}
-		System.out.println("No of Entities : " + i);
-		xml.saveToXML("country.xml");
-		
+		//exportCountries();
+		compareContries();
 		System.out.println("End");/**/
 		
+	}
+	
+	public static void compareContries() throws JDOMException, IOException {
 		List<EntityDescription> xmlEntities = ReadXML.read();
 		
 		DuplicateDetection dupl = new DuplicateDetectionDogmatiXImpl();
@@ -84,6 +75,21 @@ public class Test {
 			}
 			//System.out.println(e1.getLabel()[0]+": "+nameMax+" ("+max+")");
 		}
+	}
+	
+	public static void exportCountries() throws IOException {
+		CountryXML xml = new CountryXML();
+
+		Iterator<URI> listEntities = KIMAPI.getAllEntityURIInClass(WKBConstants.CLASS_COUNTRY);
+		int i=0;
+		while(listEntities.hasNext()){
+			i++;
+			KIMEntity e = new KIMEntity(listEntities.next());
+			e.extract();
+			xml.addEntity(e);
+		}
+		System.out.println("No of Entities : " + i);
+		xml.saveToXML("country.xml");
 	}
 
 }
