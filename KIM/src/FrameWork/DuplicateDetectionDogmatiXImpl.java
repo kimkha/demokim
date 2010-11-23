@@ -6,18 +6,12 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-import java.util.TreeSet;
 
 import model.Description;
 import model.KIMEntity;
 
 import org.openrdf.model.URI;
-import org.openrdf.model.impl.LiteralImpl;
-import org.openrdf.model.impl.URIImpl;
 
-import com.ontotext.kim.client.model.WKBConstants;
-
-import tool.KIMAPI;
 import uk.ac.shef.wit.simmetrics.similaritymetrics.Levenshtein;
 
 public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
@@ -73,6 +67,21 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 		}
 		eledes1.removeAll(set);
 		eledes2.removeAll(set);
+		Iterator<Description> ite1 = eledes1.iterator();
+		while (ite1.hasNext()) {
+			des1 = ite1.next();
+			Iterator<Description> ite2 = eledes2.iterator();
+			while (ite2.hasNext()) {
+				des2 = ite2.next();
+				if (des1.getProperty().equals(des2.getProperty())) {
+					difNr += getStrength(des1,des2);
+					if(ite1.hasNext())
+						ite1.next();
+					relades2.remove(des2);
+					ite2 = relades2.iterator();
+				}
+			}
+		}
 		for(int i=0; i < eledes1.size(); i++){
 			des1 = eledes1.get(i);
 			for(int j=0; j < eledes2.size(); j++){
@@ -103,13 +112,12 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 		relades1.removeAll(set);
 		relades2.removeAll(set);
 		Iterator<Description> it1 = relades1.iterator();
-		while(it1.hasNext()){
+		while (it1.hasNext()) {
 			des1 = it1.next();
 			Iterator<Description> it2 = relades2.iterator();
-			while(it2.hasNext()){
-				
+			while (it2.hasNext()) {
 				des2 = it2.next();
-				if(des1.getProperty().equals(des2.getProperty())){
+				if (des1.getProperty().equals(des2.getProperty())) {
 					difNr += getStrength(des1,des2);
 					if(it1.hasNext())
 						it1.next();
