@@ -75,14 +75,6 @@ public class KIMEntity extends KIMResource implements EntityDescription{
 		isExtracted = true;
 	}
 	
-	public void addLabel(String label) {
-		//TODO Something
-	}
-	
-	public void addAlias(String alias) {
-		//TODO Something
-	}
-
 	public Literal getMainLabel() {
 		if(!isExtracted)
 			extract();
