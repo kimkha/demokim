@@ -1,29 +1,17 @@
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
-
-import org.openrdf.model.URI;
-import org.openrdf.model.impl.LiteralImpl;
-import org.openrdf.model.impl.URIImpl;
 
 import model.KIMEntity;
 
-import FrameWork.CandidateDefinitionImpl;
-import FrameWork.DuplicateDefinitionImpl;
-import FrameWork.DuplicateDetection;
-import FrameWork.DuplicateDetectionDogmatiXImpl;
+import org.openrdf.model.URI;
 
-import com.ontotext.kim.client.CompareStyleConstants;
-import com.ontotext.kim.client.entity.EntityDescriptionImpl;
+import tool.KIMAPI;
+import tool.parser.CountryXML;
+
 import com.ontotext.kim.client.model.WKBConstants;
 import com.ontotext.kim.client.query.KIMQueryException;
 import com.ontotext.kim.client.query.SemanticQuery;
-
-import test.TestData;
-import tool.ConfigFile;
-import tool.KIMAPI;
 
 
 public class Test {
@@ -42,6 +30,7 @@ public class Test {
 		
 		KIMAPI.start();
 		//TestData.importData();
+		CountryXML xml = new CountryXML();
 
 		SemanticQuery seq1 = new SemanticQuery();
 		FileWriter file = new FileWriter("country.txt");
@@ -56,12 +45,14 @@ public class Test {
 				i++;
 				KIMEntity e = new KIMEntity(listEntities.next());
 				e.extract();
+				xml.addEntity(e);
 				file.write(e.getFullInfo());
 				file.write("\n----------------------\n");
 			}
+			System.out.println("No of Entities : " + i);
 			file.write("No of Entities : " + i);
-			file.write("END");
 			file.close();
+			xml.saveToXML("country.xml");
 			
 		} catch (KIMQueryException e) {
 			// TODO Auto-generated catch block

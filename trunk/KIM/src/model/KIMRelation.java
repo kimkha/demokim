@@ -9,6 +9,7 @@ import org.openrdf.model.Resource;
 import org.openrdf.model.URI;
 
 import com.ontotext.kim.client.entity.EntityDescription;
+@SuppressWarnings("serial")
 public class KIMRelation extends KIMProperty{
 	private EntityDescription entdes;
 	public List<KIMEntity> listobj;
