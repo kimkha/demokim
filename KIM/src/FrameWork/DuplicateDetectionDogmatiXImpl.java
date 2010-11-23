@@ -2,6 +2,7 @@ package FrameWork;
 
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
@@ -67,29 +68,35 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 		}
 		eledes1.removeAll(set);
 		eledes2.removeAll(set);
-		Iterator<Description> ite1 = eledes1.iterator();
-		while (ite1.hasNext()) {
-			des1 = ite1.next();
-			Iterator<Description> ite2 = eledes2.iterator();
-			while (ite2.hasNext()) {
-				des2 = ite2.next();
-				if (des1.getProperty().equals(des2.getProperty())) {
-					difNr += getStrength(des1,des2);
-					if(ite1.hasNext())
-						ite1.next();
-					relades2.remove(des2);
-					ite2 = relades2.iterator();
-				}
+		
+		HashMap<String, Integer> he1 = new HashMap<String, Integer>();
+		for (int i=0; i<eledes1.size(); i++) {
+			String name = eledes1.get(i).getProperty();
+			int c = 0;
+			if (he1.containsKey(name)) {
+				c = he1.get(name);
+				he1.remove(name);
 			}
+			he1.put(name, (c+1));
 		}
-		for(int i=0; i < eledes1.size(); i++){
-			des1 = eledes1.get(i);
-			for(int j=0; j < eledes2.size(); j++){
-				des2 = eledes2.get(j);
-				if(des1.getProperty().equals(des2.getProperty())){
-					difNe += getStrength(des1,des2);
-					eledes1.remove(des1);
-					eledes2.remove(des2);
+		HashMap<String, Integer> he2 = new HashMap<String, Integer>();
+		for (int i=0; i<eledes2.size(); i++) {
+			String name = eledes2.get(i).getProperty();
+			int c = 0;
+			if (he2.containsKey(name)) {
+				c = he2.get(name);
+				he2.remove(name);
+			}
+			he2.put(name, (c+1));
+		}
+		for (String s : he1.keySet()) {
+			if (he2.containsKey(s)) {
+				int v1 = he1.get(s);
+				int v2 = he2.get(s);
+				if (v1<v2) {
+					difNe += v1;
+				} else {
+					difNe += v2;
 				}
 			}
 		}
@@ -111,18 +118,35 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 		}
 		relades1.removeAll(set);
 		relades2.removeAll(set);
-		Iterator<Description> it1 = relades1.iterator();
-		while (it1.hasNext()) {
-			des1 = it1.next();
-			Iterator<Description> it2 = relades2.iterator();
-			while (it2.hasNext()) {
-				des2 = it2.next();
-				if (des1.getProperty().equals(des2.getProperty())) {
-					difNr += getStrength(des1,des2);
-					if(it1.hasNext())
-						it1.next();
-					relades2.remove(des2);
-					it2 = relades2.iterator();
+		
+		HashMap<String, Integer> h1 = new HashMap<String, Integer>();
+		for (int i=0; i<relades1.size(); i++) {
+			String name = relades1.get(i).getProperty();
+			int c = 0;
+			if (h1.containsKey(name)) {
+				c = h1.get(name);
+				h1.remove(name);
+			}
+			h1.put(name, (c+1));
+		}
+		HashMap<String, Integer> h2 = new HashMap<String, Integer>();
+		for (int i=0; i<relades2.size(); i++) {
+			String name = relades2.get(i).getProperty();
+			int c = 0;
+			if (h2.containsKey(name)) {
+				c = h2.get(name);
+				h2.remove(name);
+			}
+			h2.put(name, (c+1));
+		}
+		for (String s : h1.keySet()) {
+			if (h2.containsKey(s)) {
+				int v1 = h1.get(s);
+				int v2 = h2.get(s);
+				if (v1<v2) {
+					difNr += v1;
+				} else {
+					difNr += v2;
 				}
 			}
 		}
