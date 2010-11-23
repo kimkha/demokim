@@ -18,6 +18,7 @@ import com.ontotext.kim.client.query.KIMQueryException;
 import com.ontotext.kim.client.semanticrepository.ClosableIterator;
 import com.ontotext.kim.client.semanticrepository.SemanticRepositoryException;
 
+@SuppressWarnings("serial")
 public class KIMEntity extends KIMResource implements EntityDescription{
 
 	private EntityDescription entdes = null;
@@ -141,6 +142,46 @@ public class KIMEntity extends KIMResource implements EntityDescription{
 			return str;
 		} else
 			return null;
+	}
+	
+	public String getXML(String prefix, String kindOfTag) {
+		if (this.isExtracted) {
+			String str = prefix+"<"+kindOfTag+">\n";
+			for (int i=0; i<this.attributes.size(); i++) {
+				KIMAttribute attr = this.attributes.get(i);
+				String tag = attr.getLabel();
+				String[] values = attr.getValues();
+				for (int j=0; j<values.length; j++) {
+					str += prefix+"\t<" + tag + ">"+values[j]+"</" + tag + ">\n";
+				}
+			}
+			for (int i=0; i<this.relations.size(); i++) {
+				KIMRelation rel = this.relations.get(i);
+				String tag = rel.getLabel();
+				List<KIMEntity> list = rel.listobj;
+				if(tag.equals("hasAlias") || tag.equals("hasMainAlias")){
+					for(int j=0; j<list.size(); j++)
+						{
+						list.get(j).extract();
+						str += prefix+"\t<" + tag + ">"+list.get(j).getMainLabel().toString()
+								+"</" + tag + ">\n";
+						}
+				}
+				else{
+					for(int j=0; j<list.size(); j++)
+						str += prefix+"\t<" + tag + ">"+list.get(j).res.toString()
+								+"</" + tag + ">\n";
+				}
+			}
+			str += prefix+"</"+kindOfTag+">\n";
+			return str;
+		} else {
+			return null;
+		}
+	}
+	
+	public String getXML(String kindOfTag) {
+		return this.getXML("", kindOfTag);
 	}
 
 	public Resource getResource() {
