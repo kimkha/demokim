@@ -22,7 +22,6 @@ public class KIMAttribute extends KIMProperty{
 		this.res = uri;
 		try {
 			entdes = KIMAPI.getEntApi().getEntityDescription(uri);
-			EntityDescription e;
 		} catch (KIMQueryException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -49,7 +48,7 @@ public class KIMAttribute extends KIMProperty{
 		Iterator<Statement> it = g.iterator();
 		while(it.hasNext()){
 			Statement sta = it.next();
-			if(sta.getPredicate().toString() == "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"){
+			if(sta.getPredicate().toString().equals("http://www.w3.org/1999/02/22-rdf-syntax-ns#type")){
 				if(sta.getObject().toString().contains("FunctionalProperty")){
 					return true;
 				}

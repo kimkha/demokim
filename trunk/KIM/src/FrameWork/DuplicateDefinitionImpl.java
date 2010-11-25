@@ -11,6 +11,8 @@ import org.openrdf.model.Graph;
 import org.openrdf.model.Literal;
 import org.openrdf.model.Statement;
 
+import com.ontotext.kim.client.model.WKBConstants;
+
 import model.Description;
 import model.DupDefPolicy;
 import model.KIMAttribute;
@@ -39,7 +41,10 @@ public class DuplicateDefinitionImpl implements DuplicateDefinition{
 			if(rela.getLabel() == "hasAlias"){
 				List<KIMEntity> listobj = rela.listobj;
 				for(KIMEntity e1: listobj){
-					Description d = new Description(rela.getLabel(),e1.getMainLabel().toString());
+					e1.extract();
+					Description d = new Description(
+							WKBConstants.PROPERTY_HAS_ALIAS,
+							e1.getMainLabel().toString());
 					list.add(d);
 				}
 			}
@@ -52,7 +57,11 @@ public class DuplicateDefinitionImpl implements DuplicateDefinition{
 		List<Description> list = new ArrayList<Description>();
 		List<KIMRelation> kimRela = e.relations;
 		for(KIMRelation rela: kimRela){
-			if(!rela.getLabel().equals("hasAlias") && !rela.getLabel().equals("hasMainAlias") && !rela.getLabel().equals("type") &&  !rela.isFunctional()){
+			if(!rela.getLabel().equals("hasAlias") && 
+					!rela.getLabel().equals("hasMainAlias") && 
+					!rela.getLabel().equals("type") && 
+					!rela.getLabel().equals("generatedBy") &&  
+					!rela.isFunctional()){
 				List<KIMEntity> listobj = rela.listobj;
 				for(KIMEntity k : listobj){
 					Description d = new Description(rela.getLabel(),k.res.toString());

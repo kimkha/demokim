@@ -48,33 +48,45 @@ public class Test {
 	}
 	
 	public static void compareContries() throws JDOMException, IOException {
-		List<EntityDescription> xmlEntities = ReadXML.read();
+		List<EntityDescription> xmlEntities = ReadXML.read("countries_dirty.xml");
 		
 		DuplicateDetection dupl = new DuplicateDetectionDogmatiXImpl();
 		dupl.setCandef(new CandidateDefinitionImpl());
 		dupl.setDupdef(new DuplicateDefinitionImpl());
 		dupl.setSimThreshold(0.5);
-		dupl.setValueThreshold(0.5);
+		dupl.setValueThreshold(0.7);
+		
+		FileWriter file = new FileWriter("result.csv");
 
-		//for (int i=0; i<xmlEntities.size(); i++) {
-		for (int i=0; i<1; i++) {
+		for (int i=0; i<xmlEntities.size(); i++) {
+//		for (int i=0; i<10; i++) {
 			KIMEntity e1 = new KIMEntity(xmlEntities.get(i));
 			double max = -1;
 			String nameMax = "";
+
+			String firstLine = e1.getLabel()[0]+",";
+			String secondLine = ",";
 			
 			Iterator<URI> kbEntities = KIMAPI.getAllEntityURIInClass(WKBConstants.CLASS_COUNTRY);
 			while (kbEntities.hasNext()) {
 				KIMEntity e2 = new KIMEntity(kbEntities.next());
 				e2.extract();
 				double sim = dupl.getSimilarity(e1, e2);
-				System.out.println(e2.getLabel()[0]+": ("+sim+")");
-//				if (sim>max) {
-//					max = sim;
-//					nameMax = e2.getLabel()[0];
-//				}
+				if (sim>0.1) {
+					firstLine += e2.getLabel()[0]+",";
+					secondLine += sim+",";
+				}
+				if (sim>max) {
+					max = sim;
+					nameMax = e2.getLabel()[0];
+				}
 			}
-			//System.out.println(e1.getLabel()[0]+": "+nameMax+" ("+max+")");
+
+			file.write(firstLine+"\n");
+			file.write(secondLine+"\n\n");
+			System.out.println(e1.getLabel()[0]+": "+nameMax+" ("+max+")");
 		}
+		file.close();
 	}
 	
 	public static void exportCountries() throws IOException {

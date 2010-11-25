@@ -22,7 +22,6 @@ import com.ontotext.kim.client.semanticrepository.SemanticRepositoryException;
 public class KIMEntity extends KIMResource implements EntityDescription{
 
 	private EntityDescription entdes = null;
-	public boolean isExtracted = false;
 	public List<KIMAttribute> attributes = null;
 	public List<KIMRelation> relations = null;
 
@@ -34,8 +33,8 @@ public class KIMEntity extends KIMResource implements EntityDescription{
 	public KIMEntity(EntityDescription ent) {
 		this.entdes = ent;
 		res = ent.getResource();
-		extract();
-
+		this.extract();
+		this.isExtracted = true;
 	}
 	
 	public KIMEntity(File xmlfile){
