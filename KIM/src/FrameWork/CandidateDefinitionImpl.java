@@ -2,6 +2,7 @@ package FrameWork;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
@@ -10,6 +11,7 @@ import org.openrdf.model.URI;
 
 import tool.KIMAPI;
 import model.CanDefPolicy;
+import model.KIMClass;
 import model.KIMEntity;
 
 public class CandidateDefinitionImpl implements CandidateDefinition{
@@ -22,35 +24,34 @@ public class CandidateDefinitionImpl implements CandidateDefinition{
 			listCandidate = new ArrayList<List<URI>>();
 		}
 	}
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<URI> listCandidate(KIMEntity e) {
 		// Truy van cac thuc the can kiem tra.
+		List<KIMClass> kimclasses = e.getKIMClass();
 		if(canDefPo == null){
 			// truy van cac thuc the cung lop
-		
-			Resource kimClass = e.getKIMClass().res;
 			List<URI> listcan = new ArrayList<URI>();
-			Iterator<URI> itcan = KIMAPI.getAllEntityURIInClass(kimClass);
-			while(itcan.hasNext()){
-				listcan.add(itcan.next());
+			for(KIMClass c : kimclasses){
+				listcan.addAll((Collection<URI>) KIMAPI.getAllEntityURIInClass(c.res));
 			}
 			return listcan;
 		}else{
-			
+			List<URI> listcan = new ArrayList<URI>();
+			for(KIMClass c : kimclasses){
+				List<URI> clazz = canDefPo.getRelateClass(c);
+				for(URI u : clazz){
+					listcan.addAll((Collection<URI>) KIMAPI.getAllEntityURIInClass(u));
+				}
+			}
+			return listcan;
 		}
-		return null;
 	}
-	
-	public List<URI> listCandidate(){
-		return null;
-	}
-
 	@Override
 	public void setCandidateDefFile(File f) {
 		canDefPo = new CanDefPolicy(f);	
 	}
-
-
+	
 	@Override
 	public boolean hasNext() {
 		// TODO Auto-generated method stub
