@@ -1,3 +1,4 @@
+
 package model;
 
 import java.io.File;
@@ -93,18 +94,19 @@ public class KIMEntity extends KIMResource implements EntityDescription{
 		return result;
 	}
 
-	public KIMClass getKIMClass() {
-		KIMClass kimClass = null;
+	public List<KIMClass> getKIMClass() {
+		List<KIMClass> kimClasses = new ArrayList<KIMClass>();
 		try {
 			ClosableIterator<Resource> cl = KIMAPI.getSemRepoApi().getDirectClasses(res);
 			Resource res = cl.next();
-			kimClass = new KIMClass(res);
+			KIMClass kimClass = new KIMClass(res);
+			kimClasses.add(kimClass);
 			
 		} catch (SemanticRepositoryException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return kimClass;
+		return kimClasses;
 	}
 
 	public String getFullInfo() {
@@ -145,14 +147,13 @@ public class KIMEntity extends KIMResource implements EntityDescription{
 	
 	public String getXML(String prefix, String kindOfTag) {
 		if (this.isExtracted) {
-			String str = prefix+"<"+kindOfTag+" id=\""+this.getResource().stringValue()+"\">\n";
+			String str = prefix+"<"+kindOfTag+">\n";
 			for (int i=0; i<this.attributes.size(); i++) {
 				KIMAttribute attr = this.attributes.get(i);
 				String tag = attr.getLabel();
 				String[] values = attr.getValues();
 				for (int j=0; j<values.length; j++) {
-					str += prefix+"\t<" + tag + ">"+values[j].replaceAll("\"", "")
-							+"</" + tag + ">\n";
+					str += prefix+"\t<" + tag + ">"+values[j]+"</" + tag + ">\n";
 				}
 			}
 			for (int i=0; i<this.relations.size(); i++) {
@@ -163,15 +164,13 @@ public class KIMEntity extends KIMResource implements EntityDescription{
 					for(int j=0; j<list.size(); j++)
 						{
 						list.get(j).extract();
-						str += prefix+"\t<" + tag + ">"
-								+list.get(j).getMainLabel().toString().replaceAll("\"", "")
+						str += prefix+"\t<" + tag + ">"+list.get(j).getMainLabel().toString()
 								+"</" + tag + ">\n";
 						}
 				}
 				else{
 					for(int j=0; j<list.size(); j++)
-						str += prefix+"\t<" + tag + ">"
-								+list.get(j).res.toString().replaceAll("\"", "")
+						str += prefix+"\t<" + tag + ">"+list.get(j).res.toString()
 								+"</" + tag + ">\n";
 				}
 			}
