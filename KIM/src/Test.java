@@ -41,8 +41,8 @@ public class Test {
 		
 		KIMAPI.start();
 		//TestData.importData();
-		//exportCountries();
-		compareContries();
+		exportCountries();
+		//compareContries();
 		System.out.println("End");/**/
 		
 	}
@@ -73,7 +73,7 @@ public class Test {
 				e2.extract();
 				double sim = dupl.getSimilarity(e1, e2);
 				if (sim>0.1) {
-					firstLine += e2.getLabel()[0]+",";
+					firstLine += e2.getLabel()[0].replaceAll("\"\"", "\"")+",";
 					secondLine += sim+",";
 				}
 				if (sim>max) {

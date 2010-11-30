@@ -145,13 +145,14 @@ public class KIMEntity extends KIMResource implements EntityDescription{
 	
 	public String getXML(String prefix, String kindOfTag) {
 		if (this.isExtracted) {
-			String str = prefix+"<"+kindOfTag+">\n";
+			String str = prefix+"<"+kindOfTag+" id=\""+this.getResource().stringValue()+"\">\n";
 			for (int i=0; i<this.attributes.size(); i++) {
 				KIMAttribute attr = this.attributes.get(i);
 				String tag = attr.getLabel();
 				String[] values = attr.getValues();
 				for (int j=0; j<values.length; j++) {
-					str += prefix+"\t<" + tag + ">"+values[j]+"</" + tag + ">\n";
+					str += prefix+"\t<" + tag + ">"+values[j].replaceAll("\"", "")
+							+"</" + tag + ">\n";
 				}
 			}
 			for (int i=0; i<this.relations.size(); i++) {
@@ -162,13 +163,15 @@ public class KIMEntity extends KIMResource implements EntityDescription{
 					for(int j=0; j<list.size(); j++)
 						{
 						list.get(j).extract();
-						str += prefix+"\t<" + tag + ">"+list.get(j).getMainLabel().toString()
+						str += prefix+"\t<" + tag + ">"
+								+list.get(j).getMainLabel().toString().replaceAll("\"", "")
 								+"</" + tag + ">\n";
 						}
 				}
 				else{
 					for(int j=0; j<list.size(); j++)
-						str += prefix+"\t<" + tag + ">"+list.get(j).res.toString()
+						str += prefix+"\t<" + tag + ">"
+								+list.get(j).res.toString().replaceAll("\"", "")
 								+"</" + tag + ">\n";
 				}
 			}
