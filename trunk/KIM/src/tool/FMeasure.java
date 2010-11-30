@@ -8,9 +8,9 @@ public class FMeasure {
 	private ArrayList<Element> listEntities = new ArrayList<Element>();
 	private int currentElement = -1;
 	
-	public void setCurrentEntity(KIMEntity entity, String targetURI) {
+	public void setCurrentEntity(KIMEntity entity, String targetURI, boolean isRealDupl) {
 		Element el = new Element();
-		el.setEntity(entity, targetURI);
+		el.setEntity(entity, targetURI, isRealDupl);
 		
 		listEntities.add(el);
 		this.currentElement = listEntities.size()-1;
@@ -24,16 +24,21 @@ public class FMeasure {
 	private class Element {
 		private String entityURI;
 		private KIMEntity entity;
+		private boolean isRealDupl;
 		private ArrayList<Item> listTarget = new ArrayList<Item>();
-		public void setEntity(KIMEntity entity, String entityURI) {
+		public void setEntity(KIMEntity entity, String entityURI, boolean isRealDupl) {
 			this.entityURI = entityURI;
 			this.entity = entity;
+			this.isRealDupl = isRealDupl;
 		}
 		public KIMEntity getEntity() {
 			return entity;
 		}
 		public String getEntityURI() {
 			return entityURI;
+		}
+		public boolean isRealDuplicate() {
+			return this.isRealDupl;
 		}
 		public void add(String relatedURI, double sim) {
 			Item i = new Item();
