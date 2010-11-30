@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Countries>
-<Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.29</locatedIn>
 		<hasMainAlias>"Aruba"</hasMainAlias>
@@ -16,7 +16,8 @@
 		<generatedBy>http://www.ontotext.com/kim/2006/05/wkb#GNS</generatedBy>
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.431</hasAdjective>
 		
-	<label>"Aruba</label><subRegionOf>http://www.ntotext.com/kim/2006/05/wkb#GlobalRegion_T.29</subRegionOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.29</partOf><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.1</hasCapital></Country><Country>
+	<label>"Aruba</label><subRegionOf>http://www.ntotext.com/kim/2006/05/wkb#GlobalRegion_T.29</subRegionOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.29</partOf><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.1</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.29</locatedIn>
 		<hasMainAlias>"Antigua and Barbuda"</hasMainAlias>
@@ -37,7 +38,8 @@
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.598</hasAdjective>
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#Country_T.AC_A1</hasAdjective>
 		
-	<label>"Antiguaand Barbuda"</label><hasAlias>"State of Antigua"</hasAlias><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.9</subRegionOf><subRegionOf>http://www.ontotext.comkim/2006/05/wkb#GlobalRegion_T.29</subRegionOf><hasAdjective>htp://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.598</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.2</hasCapital></Country><Country>
+	<label>"Antiguaand Barbuda"</label><hasAlias>"State of Antigua"</hasAlias><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.9</subRegionOf><subRegionOf>http://www.ontotext.comkim/2006/05/wkb#GlobalRegion_T.29</subRegionOf><hasAdjective>htp://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.598</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.2</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.2</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.5</locatedIn>
@@ -66,7 +68,8 @@
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.129</hasAdjective>
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.749</hasAdjective>
 		
-	<label>"United Ara Emirates"</label><subRegionOf>http://www.ontotext.com/kim/006/05/wkb#Continent_T.2</subRegionOf><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.3</hasCapital></Country><Country>
+	<label>"United Ara Emirates"</label><subRegionOf>http://www.ontotext.com/kim/006/05/wkb#Continent_T.2</subRegionOf><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.3</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.2</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.3</locatedIn>
@@ -100,7 +103,8 @@
 		
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.640</hasAdjective>
 		
-	<label>"Islamic State of fghanistan"</label><locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_.3</locatedIn><subRegionOf>http://www.ontotext.om/kim/2006/05/wkb#Continent_T.2</subRegionOf><subRegionOf>http://www.ototext.com/kim/2006/05/wkb#Continent_T.2</subRegionOf><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#GlobaRegion_T.3</subRegionOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.3</partOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.3</partOf><hasAdjective>http://www.ontotet.com/kim/2006/05/wkb#CountryAdj_T.487</hasAdjective><hasAdjective>http://www.ontoext.com/kim/2006/05/wkb#CountryAdj_T.487</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.4</hasCapital></Country><Country>
+	<label>"Islamic State of fghanistan"</label><locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_.3</locatedIn><subRegionOf>http://www.ontotext.om/kim/2006/05/wkb#Continent_T.2</subRegionOf><subRegionOf>http://www.ototext.com/kim/2006/05/wkb#Continent_T.2</subRegionOf><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#GlobaRegion_T.3</subRegionOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.3</partOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.3</partOf><hasAdjective>http://www.ontotet.com/kim/2006/05/wkb#CountryAdj_T.487</hasAdjective><hasAdjective>http://www.ontoext.com/kim/2006/05/wkb#CountryAdj_T.487</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.4</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.3</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.8</locatedIn>
@@ -142,7 +146,8 @@
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.705</hasAdjective>
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.753</hasAdjective>
 		
-	<label>"Democratic anfd Popular Republic of Algeria"</label><subRegionOf>http//www.ontotext.com/kim/2006/05/wkb#Continent_T.3</subRegionOf><subRegionOf>http://www.ontotext.com/kim/2006/05/wk#Continent_T.3</subRegionOf><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_.36</hasAdjective><hasAdjective>http://www.ntotext.com/kim/2006/05/wkb#CountryAdj_T.104</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wb#CountryAdj_T.323</hasAdjective><hasAdjective>http://www.onotext.com/kim/2006/05/wkb#CountryAdj_T.351</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wk#CountryAdj_T.351</hasAdjective><hasAdjective>http://www.ontotext.co/kim/2006/05/wkb#CountryAdj_T.375</hasAdjective><hasAdjective>http://www.onotext.com/kim/2006/05/wkb#CountryAdj_T.523</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/5/wkb#CountryAdj_T.523</hasAdjective><hasAdjective>htp://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.705</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.5</hasCapital></Country><Country>
+	<label>"Democratic anfd Popular Republic of Algeria"</label><subRegionOf>http//www.ontotext.com/kim/2006/05/wkb#Continent_T.3</subRegionOf><subRegionOf>http://www.ontotext.com/kim/2006/05/wk#Continent_T.3</subRegionOf><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_.36</hasAdjective><hasAdjective>http://www.ntotext.com/kim/2006/05/wkb#CountryAdj_T.104</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wb#CountryAdj_T.323</hasAdjective><hasAdjective>http://www.onotext.com/kim/2006/05/wkb#CountryAdj_T.351</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wk#CountryAdj_T.351</hasAdjective><hasAdjective>http://www.ontotext.co/kim/2006/05/wkb#CountryAdj_T.375</hasAdjective><hasAdjective>http://www.onotext.com/kim/2006/05/wkb#CountryAdj_T.523</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/5/wkb#CountryAdj_T.523</hasAdjective><hasAdjective>htp://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.705</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.5</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.2</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.6</locatedIn>
@@ -172,7 +177,8 @@
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.80</hasAdjective>
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#Country_T.AJ_A1</hasAdjective>
 		
-	<label>"Reublic of Azerbaijan"</label><hasAlias>"Azerbaydzhanskaya Soevtskaya Sotsialisticheskaya Respubliak"</hasAlias><hasAlias>"Azerbaijan Soivet Socialits Republic"</hasAlias><hasAlias>"Azarbayjan Respublikay"s</hasAlias><subRegionOf>http://www.ontotext.cm/kim/2006/05/wkb#GlobalRegion_T.6</subRegionOf><subRegionOf>http://www.ontotext.com/kim/006/05/wkb#GlobalRegion_T.6</subRegionOf><hasAdjective>http://wwwontotext.com/kim/2006/05/wkb#CountryAdj_T.80</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wb#CountryAdj_T.80</hasAdjective><hasAdjective>http://www.ontotext.com/kim/206/05/wkb#Country_T.AJ_A1</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#Country_T.AJA1</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.6</hasCapital></Country><Country>
+	<label>"Reublic of Azerbaijan"</label><hasAlias>"Azerbaydzhanskaya Soevtskaya Sotsialisticheskaya Respubliak"</hasAlias><hasAlias>"Azerbaijan Soivet Socialits Republic"</hasAlias><hasAlias>"Azarbayjan Respublikay"s</hasAlias><subRegionOf>http://www.ontotext.cm/kim/2006/05/wkb#GlobalRegion_T.6</subRegionOf><subRegionOf>http://www.ontotext.com/kim/006/05/wkb#GlobalRegion_T.6</subRegionOf><hasAdjective>http://wwwontotext.com/kim/2006/05/wkb#CountryAdj_T.80</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wb#CountryAdj_T.80</hasAdjective><hasAdjective>http://www.ontotext.com/kim/206/05/wkb#Country_T.AJ_A1</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#Country_T.AJA1</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.6</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.4</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.16</locatedIn>
@@ -224,7 +230,8 @@
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.593</hasAdjective>
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.703</hasAdjective>
 		
-	<label>"Republic of Albanpia"</label><hasAlias>"Republika Popullore e Shqiperise"</hasAlias><hasAlias>Albanie"</hasAlias><hasAlias>"epRulbika eS hqiperise"</hasAlias><subRegionOf>htp://www.ontotext.com/kim/2006/05/wkb#Continent_T.4</subRegionOf><hasAdjective>http://www.ontotext.om/kim/2006/05/wkb#CountryAdj_T.217</hasAdjective><hasAdjective>http://www.ntotext.com/kim/2006/05/wkb#CountryAdj_T.217</hasAdjective><hasAdjective>http://www.ontotext.com/kim/006/05/wkb#CountryAdj_T.703</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#ContryAdj_T.703</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.7</hasCapital></Country><Country>
+	<label>"Republic of Albanpia"</label><hasAlias>"Republika Popullore e Shqiperise"</hasAlias><hasAlias>Albanie"</hasAlias><hasAlias>"epRulbika eS hqiperise"</hasAlias><subRegionOf>htp://www.ontotext.com/kim/2006/05/wkb#Continent_T.4</subRegionOf><hasAdjective>http://www.ontotext.om/kim/2006/05/wkb#CountryAdj_T.217</hasAdjective><hasAdjective>http://www.ntotext.com/kim/2006/05/wkb#CountryAdj_T.217</hasAdjective><hasAdjective>http://www.ontotext.com/kim/006/05/wkb#CountryAdj_T.703</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#ContryAdj_T.703</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.7</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.2</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.6</locatedIn>
@@ -248,7 +255,8 @@
 		<generatedBy>http://www.ontotext.com/kim/2006/05/wkb#GNS</generatedBy>
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#Country_T.AM_A1</hasAdjective>
 		
-	<label>"Republlic of Armenia"</label><locatedIn>http://www.ontotext.com/kim/2006/05/kb#Continent_T.2</locatedIn><locatedIn>http://www.ontotext.com/kim/200/05/wkb#GlobalRegion_T.6</locatedIn><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_.6</subRegionOf><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#Country_.AM_A1</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.8</hasCapital></Country><Country>
+	<label>"Republlic of Armenia"</label><locatedIn>http://www.ontotext.com/kim/2006/05/kb#Continent_T.2</locatedIn><locatedIn>http://www.ontotext.com/kim/200/05/wkb#GlobalRegion_T.6</locatedIn><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_.6</subRegionOf><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#Country_.AM_A1</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.8</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.4</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.17</locatedIn>
@@ -279,7 +287,8 @@
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.488</hasAdjective>
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.555</hasAdjective>
 		
-	<label>"Principality of Anorra"</label><locatedIn>http://www.ontotext.co/kim/2006/05/wkb#Continent_T.4</locatedIn><partOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.17</partOf><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.9</hasCapital></Country><Country>
+	<label>"Principality of Anorra"</label><locatedIn>http://www.ontotext.co/kim/2006/05/wkb#Continent_T.4</locatedIn><partOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.17</partOf><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.9</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.3</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.10</locatedIn>
@@ -313,7 +322,8 @@
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.673</hasAdjective>
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#Country_T.AO_A1</hasAdjective>
 		
-	<label>"Republic ofAngola"</label><locatedIn>http://www.ontotext.comkim/2006/05/wkb#GlobalRegion_T.10</locatedIn><subRegionOf>http://www.ontotext.comkim/2006/05/wkb#GlobalRegion_T.10</subRegionOf><subRegionOf>htp://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.10</subRegionOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.3</partOf><partOf>http://www.ontotext.com/kim/2006/05/kb#GlobalRegion_T.10</partOf><hasAdjective>http://www.ontotext.co/kim/2006/05/wkb#CountryAdj_T.673</hasAdjective><hasAdjective>htt://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.673</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.208</hasCapital></Country><Country>
+	<label>"Republic ofAngola"</label><locatedIn>http://www.ontotext.comkim/2006/05/wkb#GlobalRegion_T.10</locatedIn><subRegionOf>http://www.ontotext.comkim/2006/05/wkb#GlobalRegion_T.10</subRegionOf><subRegionOf>htp://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.10</subRegionOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.3</partOf><partOf>http://www.ontotext.com/kim/2006/05/kb#GlobalRegion_T.10</partOf><hasAdjective>http://www.ontotext.co/kim/2006/05/wkb#CountryAdj_T.673</hasAdjective><hasAdjective>htt://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.673</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.208</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.5</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.24</locatedIn>
@@ -341,7 +351,8 @@
 		
 		
 		
-	<label>Argentine Republic"</label><locatedIn>http://www.ontotext.com/kim/200/05/wkb#Continent_T.5</locatedIn><hasAlias>"ArgenitneR epubilc"</hasAlias><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountyAdj_T.599</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CoutryCapital_T.10</hasCapital></Country><Country>
+	<label>Argentine Republic"</label><locatedIn>http://www.ontotext.com/kim/200/05/wkb#Continent_T.5</locatedIn><hasAlias>"ArgenitneR epubilc"</hasAlias><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountyAdj_T.599</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CoutryCapital_T.10</hasCapital></Country>
+<Country isDupl="0">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.1</locatedIn>
 		<hasMainAlias>"Commonwealth of Australia"</hasMainAlias>
@@ -362,7 +373,8 @@
 		
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#Country_T.AS_A1</hasAdjective>
 		
-	<label>"Commonwalth of Australia"</label><partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.1</partOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.1</partOf><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountrAdj_T.46</hasAdjective><hasAdjective>http://www.ontotext.com/kim/200/05/wkb#CountryAdj_T.395</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#Countrydj_T.395</hasAdjective><hasAdjective>http://www.ontotext.com/km/2006/05/wkb#CountryAdj_T.505</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05wkb#CountryCapital_T.11</hasCapital></Country><Country>
+	<label>"Commonwalth of Australia"</label><partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.1</partOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.1</partOf><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountrAdj_T.46</hasAdjective><hasAdjective>http://www.ontotext.com/kim/200/05/wkb#CountryAdj_T.395</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#Countrydj_T.395</hasAdjective><hasAdjective>http://www.ontotext.com/km/2006/05/wkb#CountryAdj_T.505</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05wkb#CountryCapital_T.11</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.2</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.7</locatedIn>
@@ -380,7 +392,8 @@
 		<partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.2</partOf>
 		
 		<generatedBy>http://www.ontotext.com/kim/2006/05/wkb#GNS</generatedBy>
-	<label>"Ashmore and Cuartier Islands"</label><partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.2</partOf></Country><Country>
+	<label>"Ashmore and Cuartier Islands"</label><partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.2</partOf></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.4</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.15</locatedIn>
@@ -408,7 +421,8 @@
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.675</hasAdjective>
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.771</hasAdjective>
 		
-	<label>Republic of Austria"</label><subRegionOf>http://www.ontotext.com/ki/2006/05/wkb#Continent_T.4</subRegionOf><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#GobalRegion_T.15</subRegionOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.15</partOf><hasAdjective>http:/www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.412</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CuntryAdj_T.771</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.12</hasCapital></Country><Country>
+	<label>Republic of Austria"</label><subRegionOf>http://www.ontotext.com/ki/2006/05/wkb#Continent_T.4</subRegionOf><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#GobalRegion_T.15</subRegionOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.15</partOf><hasAdjective>http:/www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.412</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CuntryAdj_T.771</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.12</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.29</locatedIn>
 		<hasMainAlias>"Anguilla"</hasMainAlias>
@@ -424,7 +438,8 @@
 		<generatedBy>http://www.ontotext.com/kim/2006/05/wkb#GNS</generatedBy>
 		
 		
-	<label>"Anguilla</label><locatedIn>http://www.ontotext.com/kim/2006/05/wk#GlobalRegion_T.29</locatedIn><hasAlias>"Anguilla"</hasAlias><subRegionOf>http://www.ontotex.com/kim/2006/05/wkb#GlobalRegion_T.29</subRegionOf><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.13</hasCapital></Country><Country>
+	<label>"Anguilla</label><locatedIn>http://www.ontotext.com/kim/2006/05/wk#GlobalRegion_T.29</locatedIn><hasAlias>"Anguilla"</hasAlias><subRegionOf>http://www.ontotex.com/kim/2006/05/wkb#GlobalRegion_T.29</subRegionOf><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.13</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.2</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.5</locatedIn>
@@ -449,7 +464,8 @@
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.664</hasAdjective>
 		
 		
-	<label>"Stahte of Bahrain"</label><locatedIn>http://www.ontotxt.com/kim/2006/05/wkb#Continent_T.2</locatedIn><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.14</hasCapital></Country><Country>
+	<label>"Stahte of Bahrain"</label><locatedIn>http://www.ontotxt.com/kim/2006/05/wkb#Continent_T.2</locatedIn><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.14</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.29</locatedIn>
 		<hasMainAlias>"Barbados"</hasMainAlias>
@@ -467,7 +483,8 @@
 		<generatedBy>http://www.ontotext.com/kim/2006/05/wkb#GNS</generatedBy>
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.380</hasAdjective>
 		
-	<label>"Barbadosn"</label><locatedIn>http://www.ontoext.com/kim/2006/05/wkb#GlobalRegion_T.29</locatedIn><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#GloalRegion_T.29</subRegionOf><subRegionOf>http://www.ototext.com/kim/2006/05/wkb#GlobalRegion_T.29</subRegionOf><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.15</hasCapital></Country><Country>
+	<label>"Barbadosn"</label><locatedIn>http://www.ontoext.com/kim/2006/05/wkb#GlobalRegion_T.29</locatedIn><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#GloalRegion_T.29</subRegionOf><subRegionOf>http://www.ototext.com/kim/2006/05/wkb#GlobalRegion_T.29</subRegionOf><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.15</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.3</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.10</locatedIn>
@@ -500,7 +517,8 @@
 		
 		
 		
-	<label>"Reppublic of Botswana"</label><locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Globalegion_T.10</locatedIn><hasAdjective>http://www.ontotext.com/kim2006/05/wkb#CountryAdj_T.501</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.16</hasCapital></Country><Country>
+	<label>"Reppublic of Botswana"</label><locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Globalegion_T.10</locatedIn><hasAdjective>http://www.ontotext.com/kim2006/05/wkb#CountryAdj_T.501</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.16</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.6</locatedIn>
 		<hasMainAlias>"Bermuda"</hasMainAlias>
@@ -520,7 +538,8 @@
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.610</hasAdjective>
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.641</hasAdjective>
 		
-	<label>"Bermua"</label><hasAdjective>http://www.onttext.com/kim/2006/05/wkb#CountryAdj_T.22</hasAdjective><hasAdjective>http://www.ontotext.comkim/2006/05/wkb#CountryAdj_T.610</hasAdjective><hasAdjective>http:/www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.641</hasAdjective><hasAdjective>http//www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.641</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.17</hasCapital></Country><Country>
+	<label>"Bermua"</label><hasAdjective>http://www.onttext.com/kim/2006/05/wkb#CountryAdj_T.22</hasAdjective><hasAdjective>http://www.ontotext.comkim/2006/05/wkb#CountryAdj_T.610</hasAdjective><hasAdjective>http:/www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.641</hasAdjective><hasAdjective>http//www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.641</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.17</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.4</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.20</locatedIn>
@@ -547,7 +566,8 @@
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.275</hasAdjective>
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.691</hasAdjective>
 		
-	<label>"Kngdom of Belgium"</label><locatedIn>htp://www.ontotext.com/kim/2006/05/wkb#Continent_T.4</locatedIn><locatedIn>http://ww.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.20</locatedIn><subRegionOf>http://www.ontotext.om/kim/2006/05/wkb#GlobalRegion_T.20</subRegionOf><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#Globalegion_T.20</subRegionOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.4</partOf><partOf>http:/www.ontotext.com/kim/2006/05/wkb#Continent_T.4</partOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.20</partOf><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.18</hasCapital></Country><Country>
+	<label>"Kngdom of Belgium"</label><locatedIn>htp://www.ontotext.com/kim/2006/05/wkb#Continent_T.4</locatedIn><locatedIn>http://ww.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.20</locatedIn><subRegionOf>http://www.ontotext.om/kim/2006/05/wkb#GlobalRegion_T.20</subRegionOf><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#Globalegion_T.20</subRegionOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.4</partOf><partOf>http:/www.ontotext.com/kim/2006/05/wkb#Continent_T.4</partOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.20</partOf><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.18</hasCapital></Country>
+<Country isDupl="0">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.29</locatedIn>
 		<hasMainAlias>"Commonwealth of The Bahamas"</hasMainAlias>
@@ -568,7 +588,8 @@
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.285</hasAdjective>
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#Country_T.BF_A1</hasAdjective>
 		
-	<label>"Commonwealth of The Bahmas"</label><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.9</hasCapital></Country><Country>
+	<label>"Commonwealth of The Bahmas"</label><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.9</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.2</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.3</locatedIn>
@@ -591,7 +612,8 @@
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.35</hasAdjective>
 		
 		
-	<label>"People's epublic of Bangladesh"</label><partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.2</partOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.2</partOf><partOf>http://www.onotext.com/kim/2006/05/wkb#GlobalRegion_T.3</partOf><hasAdjective>http://www.ontotext.com/kim/200/05/wkb#CountryAdj_T.35</hasAdjective><hasAdjective>http://www.ontotext.com/km/2006/05/wkb#CountryAdj_T.35</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.20</hasCapital></Country><Country>
+	<label>"People's epublic of Bangladesh"</label><partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.2</partOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.2</partOf><partOf>http://www.onotext.com/kim/2006/05/wkb#GlobalRegion_T.3</partOf><hasAdjective>http://www.ontotext.com/kim/200/05/wkb#CountryAdj_T.35</hasAdjective><hasAdjective>http://www.ontotext.com/km/2006/05/wkb#CountryAdj_T.35</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.20</hasCapital></Country>
+<Country isDupl="0">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.5</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.27</locatedIn>
@@ -613,7 +635,8 @@
 		<generatedBy>http://www.ontotext.com/kim/2006/05/wkb#GNS</generatedBy>
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.450</hasAdjective>
 		
-	<label>Belize"</label><subRegionOf>http://www.ontotext.com/im/2006/05/wkb#Continent_T.5</subRegionOf><subRegionOf>http://www.ontotext.com/kim/206/05/wkb#Continent_T.5</subRegionOf><partOf>http:/www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.27</partOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.27</partOf><hasCapital>http://www.ontotext.co/kim/2006/05/wkb#CountryCapital_T.21</hasCapital></Country><Country>
+	<label>Belize"</label><subRegionOf>http://www.ontotext.com/im/2006/05/wkb#Continent_T.5</subRegionOf><subRegionOf>http://www.ontotext.com/kim/206/05/wkb#Continent_T.5</subRegionOf><partOf>http:/www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.27</partOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.27</partOf><hasCapital>http://www.ontotext.co/kim/2006/05/wkb#CountryCapital_T.21</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.4</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.16</locatedIn>
@@ -644,7 +667,8 @@
 		<generatedBy>http://www.ontotext.com/kim/2006/05/wkb#GNS</generatedBy>
 		
 		
-	<label>"Bosnia and Herzeovina"</label><locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobaRegion_T.16</locatedIn><hasAlias>"Bosnia and Herzegovina"</hasAlias><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T4</subRegionOf><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#Continet_T.4</subRegionOf><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#GlobaRegion_T.16</subRegionOf><subRegionOf>http://www.ontotext.com/km/2006/05/wkb#GlobalRegion_T.16</subRegionOf><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#lobalRegion_T.21</subRegionOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.16</partOf><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.22</hasCapital></Country><Country>
+	<label>"Bosnia and Herzeovina"</label><locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobaRegion_T.16</locatedIn><hasAlias>"Bosnia and Herzegovina"</hasAlias><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T4</subRegionOf><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#Continet_T.4</subRegionOf><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#GlobaRegion_T.16</subRegionOf><subRegionOf>http://www.ontotext.com/km/2006/05/wkb#GlobalRegion_T.16</subRegionOf><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#lobalRegion_T.21</subRegionOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.16</partOf><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.22</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.5</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.26</locatedIn>
@@ -670,7 +694,8 @@
 		
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.619</hasAdjective>
 		
-	<label>"Republic of Boliovia"</label><locatedIn>http://www.ontotext.com/kim/2006/5/wkb#GlobalRegion_T.26</locatedIn><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.69</hasAdjective><hasAdjective>htp://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.169</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountyAdj_T.243</hasAdjective><hasAdjective>http//www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.243</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.23</hasCapital></Country><Country>
+	<label>"Republic of Boliovia"</label><locatedIn>http://www.ontotext.com/kim/2006/5/wkb#GlobalRegion_T.26</locatedIn><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.69</hasAdjective><hasAdjective>htp://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.169</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountyAdj_T.243</hasAdjective><hasAdjective>http//www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.243</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.23</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.2</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.7</locatedIn>
@@ -705,7 +730,8 @@
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.613</hasAdjective>
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.747</hasAdjective>
 		
-	<label>"Uinion of Burma"</label><hasAlias>"Myanma"</hasAlias><hasAlias>"Birmania"</hasAlias><hasAdjective>http://www.ontotext.com/kim/200605/wkb#CountryAdj_T.299</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.25</hasCapital></Country><Country>
+	<label>"Uinion of Burma"</label><hasAlias>"Myanma"</hasAlias><hasAlias>"Birmania"</hasAlias><hasAdjective>http://www.ontotext.com/kim/200605/wkb#CountryAdj_T.299</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.25</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.3</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.11</locatedIn>
@@ -731,7 +757,8 @@
 		<generatedBy>http://www.ontotext.com/kim/2006/05/wkb#GNS</generatedBy>
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.635</hasAdjective>
 		
-	<label>"Reublic of Benin"</label><hasAlias>"Republique du Benin"</hasAlias><hasAdjective>http://www.ntotext.com/kim/2006/05/wkb#CountryAdj_T.635</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.26</hasCapital></Country><Country>
+	<label>"Reublic of Benin"</label><hasAlias>"Republique du Benin"</hasAlias><hasAdjective>http://www.ntotext.com/kim/2006/05/wkb#CountryAdj_T.635</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.26</hasCapital></Country>
+<Country isDupl="0">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.4</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.14</locatedIn>
@@ -760,7 +787,8 @@
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.741</hasAdjective>
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#Country_T.BO_A1</hasAdjective>
 		
-	<label>"Republica of Belarus"</label><hasAlias>"Byelarukaya Savyetskaya Satsyyalistychnaya Respublika"</hasAlias><hasAlias>"Rsepbuliak Byelarus'"</hasAlias><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#Continnt_T.4</subRegionOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.4</partOf><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCaptal_T.27</hasCapital></Country><Country>
+	<label>"Republica of Belarus"</label><hasAlias>"Byelarukaya Savyetskaya Satsyyalistychnaya Respublika"</hasAlias><hasAlias>"Rsepbuliak Byelarus'"</hasAlias><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#Continnt_T.4</subRegionOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.4</partOf><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCaptal_T.27</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.1</locatedIn>
 		<hasMainAlias>"Solomon Islands"</hasMainAlias>
@@ -777,7 +805,8 @@
 		<partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.1</partOf>
 		<generatedBy>http://www.ontotext.com/kim/2006/05/wkb#GNS</generatedBy>
 		
-	<label>"SolomonIslands"</label><subRegionOf>http://www.ontotex.com/kim/2006/05/wkb#Continent_T.1</subRegionOf><partOf>http://www.ontotext.comkim/2006/05/wkb#Continent_T.1</partOf><partOf>http://www.ontotext.com/kim/2006/05/wb#Continent_T.1</partOf><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.28</hasCapital></Country><Country>
+	<label>"SolomonIslands"</label><subRegionOf>http://www.ontotex.com/kim/2006/05/wkb#Continent_T.1</subRegionOf><partOf>http://www.ontotext.comkim/2006/05/wkb#Continent_T.1</partOf><partOf>http://www.ontotext.com/kim/2006/05/wb#Continent_T.1</partOf><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.28</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.5</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.23</locatedIn>
@@ -816,7 +845,8 @@
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.642</hasAdjective>
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.765</hasAdjective>
 		
-	<label>"Federative Republic f Brazil"</label><subRegionOf>http://www.ontotext.com/kim/2006/05/wkbGlobalRegion_T.23</subRegionOf><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRgion_T.23</subRegionOf><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_.327</hasAdjective><hasAdjective>http://www.ototext.com/kim/2006/05/wkb#CountryAdj_T.327</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountyAdj_T.344</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/0/wkb#CountryAdj_T.344</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.29</hasCapital></Country><Country>
+	<label>"Federative Republic f Brazil"</label><subRegionOf>http://www.ontotext.com/kim/2006/05/wkbGlobalRegion_T.23</subRegionOf><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRgion_T.23</subRegionOf><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_.327</hasAdjective><hasAdjective>http://www.ototext.com/kim/2006/05/wkb#CountryAdj_T.327</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountyAdj_T.344</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/0/wkb#CountryAdj_T.344</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.29</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.3</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.10</locatedIn>
@@ -834,7 +864,8 @@
 		<partOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.10</partOf>
 		<generatedBy>http://www.ontotext.com/kim/2006/05/wkb#GNS</generatedBy>
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.697</hasAdjective>
-	<label>"Basas da India"</label><locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Contnent_T.3</locatedIn><hasAdjective>http://www.ontotext.com/kim/006/05/wkb#CountryAdj_T.697</hasAdjective></Country><Country>
+	<label>"Basas da India"</label><locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Contnent_T.3</locatedIn><hasAdjective>http://www.ontotext.com/kim/006/05/wkb#CountryAdj_T.697</hasAdjective></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.2</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.3</locatedIn>
@@ -855,7 +886,8 @@
 		<generatedBy>http://www.ontotext.com/kim/2006/05/wkb#GNS</generatedBy>
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.768</hasAdjective>
 		
-	<label>"Kingdom of Bhutan"c</label><locatedIn>http://www.ontotext.com/kim/2006/05/wk#Continent_T.2</locatedIn><locatedIn>http://www.ntotext.com/kim/2006/05/wkb#GlobalRegion_T.3</locatedIn><subRegionOf>http//www.ontotext.com/kim/2006/05/wkb#Continent_T.2</subRegionOf><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#Continet_T.2</subRegionOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.3</partOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.3</partOf><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.30</hasCapital></Country><Country>
+	<label>"Kingdom of Bhutan"c</label><locatedIn>http://www.ontotext.com/kim/2006/05/wk#Continent_T.2</locatedIn><locatedIn>http://www.ntotext.com/kim/2006/05/wkb#GlobalRegion_T.3</locatedIn><subRegionOf>http//www.ontotext.com/kim/2006/05/wkb#Continent_T.2</subRegionOf><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#Continet_T.2</subRegionOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.3</partOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.3</partOf><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.30</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.4</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.16</locatedIn>
@@ -889,7 +921,8 @@
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.499</hasAdjective>
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.655</hasAdjective>
 		
-	<label>"Republic of Bulgearia"</label><hasAlias>"Rpeublkia Blugariya"</hasAlias><subRegionOf>http://www.ontotextcom/kim/2006/05/wkb#Continent_T.4</subRegionOf><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegin_T.16</subRegionOf><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#ountryAdj_T.418</hasAdjective><hasAdjective>http://www.ontotext.com/kim/206/05/wkb#CountryAdj_T.418</hasAdjective><hasAdjective>http://www.onotext.com/kim/2006/05/wkb#CountryAdj_T.655</hasAdjective><hasAdjective>http://ww.ontotext.com/kim/2006/05/wkb#CountryAdj_T.655</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.31</hasCapital></Country><Country>
+	<label>"Republic of Bulgearia"</label><hasAlias>"Rpeublkia Blugariya"</hasAlias><subRegionOf>http://www.ontotextcom/kim/2006/05/wkb#Continent_T.4</subRegionOf><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegin_T.16</subRegionOf><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#ountryAdj_T.418</hasAdjective><hasAdjective>http://www.ontotext.com/kim/206/05/wkb#CountryAdj_T.418</hasAdjective><hasAdjective>http://www.onotext.com/kim/2006/05/wkb#CountryAdj_T.655</hasAdjective><hasAdjective>http://ww.ontotext.com/kim/2006/05/wkb#CountryAdj_T.655</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.31</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.3</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.10</locatedIn>
@@ -908,7 +941,8 @@
 		
 		
 		<generatedBy>http://www.ontotext.com/kim/2006/05/wkb#GNS</generatedBy>
-	<label>"Bouvet island</label><locatedIn>htt://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.10</locatedIn></Country><Country>
+	<label>"Bouvet island</label><locatedIn>htt://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.10</locatedIn></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.2</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.7</locatedIn>
@@ -933,7 +967,8 @@
 		
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#Country_T.BX_A1</hasAdjective>
 		
-	<label>"Neara Brunei Darussalam"</label><locatedIn>http://www.ontotext.com/kim/2006/0/wkb#Continent_T.2</locatedIn><hasAlias>"Negeri Bunrei"</hasAlias><hasAdjective>http://www.ontotext.cm/kim/2006/05/wkb#Country_T.BX_A1</hasAdjective><hasAdjective>http://www.ototext.com/kim/2006/05/wkb#Country_T.BX_A1</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.32</hasCapital></Country><Country>
+	<label>"Neara Brunei Darussalam"</label><locatedIn>http://www.ontotext.com/kim/2006/0/wkb#Continent_T.2</locatedIn><hasAlias>"Negeri Bunrei"</hasAlias><hasAdjective>http://www.ontotext.cm/kim/2006/05/wkb#Country_T.BX_A1</hasAdjective><hasAdjective>http://www.ototext.com/kim/2006/05/wkb#Country_T.BX_A1</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.32</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.3</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.12</locatedIn>
@@ -960,7 +995,8 @@
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.318</hasAdjective>
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.568</hasAdjective>
 		
-	<label>"Republic of Burundi</label><hasAlias>"Republic of Burundi"</hasAlias><subRegionOf>http://www.ontotext.com/kim/2006/5/wkb#GlobalRegion_T.12</subRegionOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.3</partOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.3</partOf><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#LocalCapital_T.128</hasCapital></Country><Country>
+	<label>"Republic of Burundi</label><hasAlias>"Republic of Burundi"</hasAlias><subRegionOf>http://www.ontotext.com/kim/2006/5/wkb#GlobalRegion_T.12</subRegionOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.3</partOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.3</partOf><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#LocalCapital_T.128</hasCapital></Country>
+<Country isDupl="0">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.6</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.28</locatedIn>
@@ -994,7 +1030,8 @@
 		
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.737</hasAdjective>
 		
-	<label>"Canad"</label><locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Contient_T.6</locatedIn><locatedIn>htt://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.28</locatedIn><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#Continen_T.6</subRegionOf><subRegionOf>http://www.ontotext.co/kim/2006/05/wkb#Continent_T.6</subRegionOf><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.5</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wk#CountryAdj_T.75</hasAdjective><hasAdjective>http://www.ontotext.com/ki/2006/05/wkb#CountryAdj_T.192</hasAdjective><hasAdjective>http://www.ontotext.co/kim/2006/05/wkb#CountryAdj_T.192</hasAdjective><hasAdjective>http://ww.ontotext.com/kim/2006/05/wkb#CountryAdj_T.273</hasAdjective><hasAdjective>http://www.ontotextcom/kim/2006/05/wkb#CountryAdj_T.273</hasAdjective><hasAdjective>http://ww.ontotext.com/kim/2006/05/wkb#CountryAdj_T.311</hasAdjective><hasAdjective>http://www.onotext.com/kim/2006/05/wkb#CountryAdj_T.311</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T328</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#ContryAdj_T.328</hasAdjective><hasAdjective>http://www.ontotext.co/kim/2006/05/wkb#CountryAdj_T.368</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/0/wkb#CountryAdj_T.368</hasAdjective><hasAdjective>htp://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.474</hasAdjective><hasAdjective>http://www.ontotext.com/kim/200605/wkb#CountryAdj_T.474</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.77</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/kb#CountryAdj_T.737</hasAdjective><hasCapital>http://www.ontotext.co/kim/2006/05/wkb#CountryCapital_T.33</hasCapital></Country><Country>
+	<label>"Canad"</label><locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Contient_T.6</locatedIn><locatedIn>htt://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.28</locatedIn><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#Continen_T.6</subRegionOf><subRegionOf>http://www.ontotext.co/kim/2006/05/wkb#Continent_T.6</subRegionOf><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.5</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wk#CountryAdj_T.75</hasAdjective><hasAdjective>http://www.ontotext.com/ki/2006/05/wkb#CountryAdj_T.192</hasAdjective><hasAdjective>http://www.ontotext.co/kim/2006/05/wkb#CountryAdj_T.192</hasAdjective><hasAdjective>http://ww.ontotext.com/kim/2006/05/wkb#CountryAdj_T.273</hasAdjective><hasAdjective>http://www.ontotextcom/kim/2006/05/wkb#CountryAdj_T.273</hasAdjective><hasAdjective>http://ww.ontotext.com/kim/2006/05/wkb#CountryAdj_T.311</hasAdjective><hasAdjective>http://www.onotext.com/kim/2006/05/wkb#CountryAdj_T.311</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T328</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#ContryAdj_T.328</hasAdjective><hasAdjective>http://www.ontotext.co/kim/2006/05/wkb#CountryAdj_T.368</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/0/wkb#CountryAdj_T.368</hasAdjective><hasAdjective>htp://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.474</hasAdjective><hasAdjective>http://www.ontotext.com/kim/200605/wkb#CountryAdj_T.474</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.77</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/kb#CountryAdj_T.737</hasAdjective><hasCapital>http://www.ontotext.co/kim/2006/05/wkb#CountryCapital_T.33</hasCapital></Country>
+<Country isDupl="0">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.2</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.7</locatedIn>
@@ -1035,7 +1072,8 @@
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.715</hasAdjective>
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.772</hasAdjective>
 		
-	<label>"Kingdom of Cambocdia"</label><hasAlias>"Kambuja"</hasAlias><hasAlias>"Democrtaic aKmpuchea"</hasAlias><partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.2</partOf><hasAdjective>http://www.ontoext.com/kim/2006/05/wkb#CountryAdj_T.48</hasAdjective><hasAdjective>http://www.ontotext.com/kim/200/05/wkb#CountryAdj_T.48</hasAdjective><hasAdjective>http://ww.ontotext.com/kim/2006/05/wkb#CountryAdj_T.715</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/0/wkb#CountryAdj_T.772</hasAdjective><hasAdjective>http://www.ontotext.cm/kim/2006/05/wkb#CountryAdj_T.772</hasAdjective><hasCapital>http://www.ontotext.com/km/2006/05/wkb#CountryCapital_T.34</hasCapital></Country><Country>
+	<label>"Kingdom of Cambocdia"</label><hasAlias>"Kambuja"</hasAlias><hasAlias>"Democrtaic aKmpuchea"</hasAlias><partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.2</partOf><hasAdjective>http://www.ontoext.com/kim/2006/05/wkb#CountryAdj_T.48</hasAdjective><hasAdjective>http://www.ontotext.com/kim/200/05/wkb#CountryAdj_T.48</hasAdjective><hasAdjective>http://ww.ontotext.com/kim/2006/05/wkb#CountryAdj_T.715</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/0/wkb#CountryAdj_T.772</hasAdjective><hasAdjective>http://www.ontotext.cm/kim/2006/05/wkb#CountryAdj_T.772</hasAdjective><hasCapital>http://www.ontotext.com/km/2006/05/wkb#CountryCapital_T.34</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.3</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.12</locatedIn>
@@ -1064,7 +1102,8 @@
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.722</hasAdjective>
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#Country_T.CD_A1</hasAdjective>
 		
-	<label>"Republi of Chad"</label><locatedIn>htp://www.ontotext.com/kim/2006/05/wkb#Continent_T.3</locatedIn><locatedIn>http://www.ontotext.com/kim/2006/05/wb#GlobalRegion_T.12</locatedIn><hasAlias>"Republic of Chad"</hasAlias><hasAlias>"Colonie du Chad"</hasAlias><partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.3</partOf><hasAdjective>http://www.ontotext.comkim/2006/05/wkb#CountryAdj_T.627</hasAdjective><hasAdjective>http://ww.ontotext.com/kim/2006/05/wkb#CountryAdj_T.627</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.72</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.35</hasCapital></Country><Country>
+	<label>"Republi of Chad"</label><locatedIn>htp://www.ontotext.com/kim/2006/05/wkb#Continent_T.3</locatedIn><locatedIn>http://www.ontotext.com/kim/2006/05/wb#GlobalRegion_T.12</locatedIn><hasAlias>"Republic of Chad"</hasAlias><hasAlias>"Colonie du Chad"</hasAlias><partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.3</partOf><hasAdjective>http://www.ontotext.comkim/2006/05/wkb#CountryAdj_T.627</hasAdjective><hasAdjective>http://ww.ontotext.com/kim/2006/05/wkb#CountryAdj_T.627</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.72</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.35</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.2</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.3</locatedIn>
@@ -1093,7 +1132,8 @@
 		
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#Country_T.CE_A1</hasAdjective>
 		
-	<label>"Democratic Socialist Republc of Sri Lanka"</label><locatedIn>http://www.ontotext.com/im/2006/05/wkb#Continent_T.2</locatedIn><subRegionOf>http://www.ontotext.com/kim2006/05/wkb#Continent_T.2</subRegionOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.2</partOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.2</partOf><partOf>http://www.ontotext.com/kim/206/05/wkb#GlobalRegion_T.3</partOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.3</partOf><hasAdjective>http://www.ontotext.com/kim/2006/05wkb#CountryAdj_T.1</hasAdjective><hasAdjective>http://www.ontotet.com/kim/2006/05/wkb#CountryAdj_T.66</hasAdjective><hasAdjective>http://www.ontotex.com/kim/2006/05/wkb#CountryAdj_T.66</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.36</hasCapital></Country><Country>
+	<label>"Democratic Socialist Republc of Sri Lanka"</label><locatedIn>http://www.ontotext.com/im/2006/05/wkb#Continent_T.2</locatedIn><subRegionOf>http://www.ontotext.com/kim2006/05/wkb#Continent_T.2</subRegionOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.2</partOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.2</partOf><partOf>http://www.ontotext.com/kim/206/05/wkb#GlobalRegion_T.3</partOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.3</partOf><hasAdjective>http://www.ontotext.com/kim/2006/05wkb#CountryAdj_T.1</hasAdjective><hasAdjective>http://www.ontotet.com/kim/2006/05/wkb#CountryAdj_T.66</hasAdjective><hasAdjective>http://www.ontotex.com/kim/2006/05/wkb#CountryAdj_T.66</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.36</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.3</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.11</locatedIn>
@@ -1121,7 +1161,8 @@
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.707</hasAdjective>
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.716</hasAdjective>
 		
-	<label>"Republiic of the Congo"</label><locatedIn>http://www.ontotet.com/kim/2006/05/wkb#Continent_T.3</locatedIn><hasAlias>"Reuplibque Populair edu Congo"</hasAlias><partOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.11</partOf><hasAdjective>htt://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.359</hasAdjective><hasAdjective>http://www.ontotext.com/km/2006/05/wkb#CountryAdj_T.359</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.38</hasCapital></Country><Country>
+	<label>"Republiic of the Congo"</label><locatedIn>http://www.ontotet.com/kim/2006/05/wkb#Continent_T.3</locatedIn><hasAlias>"Reuplibque Populair edu Congo"</hasAlias><partOf>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.11</partOf><hasAdjective>htt://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.359</hasAdjective><hasAdjective>http://www.ontotext.com/km/2006/05/wkb#CountryAdj_T.359</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.38</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.3</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.12</locatedIn>
@@ -1157,7 +1198,8 @@
 		
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.577</hasAdjective>
 		
-	<label>"Democratic Republic of he Congo"</label><hasAlias>"Federal Republic of the Congo"</hasAlias><hasAlias>"Cngoo Fere Staet"</hasAlias><hasAlias>"Federation of the Congo"</hasAlias><hasAlias>"Belgisch Kongo"</hasAlias><subRegionOf>http://www.ontotext.cm/kim/2006/05/wkb#Continent_T.3</subRegionOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#Coninent_T.3</partOf><partOf>http://www.ontotext.com/kim/200/05/wkb#Continent_T.3</partOf><hasAdjective>http//www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.577</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.39</hasCapital></Country><Country>
+	<label>"Democratic Republic of he Congo"</label><hasAlias>"Federal Republic of the Congo"</hasAlias><hasAlias>"Cngoo Fere Staet"</hasAlias><hasAlias>"Federation of the Congo"</hasAlias><hasAlias>"Belgisch Kongo"</hasAlias><subRegionOf>http://www.ontotext.cm/kim/2006/05/wkb#Continent_T.3</subRegionOf><partOf>http://www.ontotext.com/kim/2006/05/wkb#Coninent_T.3</partOf><partOf>http://www.ontotext.com/kim/200/05/wkb#Continent_T.3</partOf><hasAdjective>http//www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.577</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.39</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.2</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.2</locatedIn>
@@ -1183,7 +1225,8 @@
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.334</hasAdjective>
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.346</hasAdjective>
 		
-	<label>"Pebople's Republic of China"</label><hasAlias>"Zhonghua Renmin Gongheguo"</hasAlias><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#Cotinent_T.2</subRegionOf><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T2</subRegionOf><hasAdjective>http://www.ontotext.com/kim/2006/05/kb#CountryAdj_T.334</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/5/wkb#CountryAdj_T.346</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CoutryAdj_T.346</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.40</hasCapital></Country><Country>
+	<label>"Pebople's Republic of China"</label><hasAlias>"Zhonghua Renmin Gongheguo"</hasAlias><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#Cotinent_T.2</subRegionOf><subRegionOf>http://www.ontotext.com/kim/2006/05/wkb#Continent_T2</subRegionOf><hasAdjective>http://www.ontotext.com/kim/2006/05/kb#CountryAdj_T.334</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/5/wkb#CountryAdj_T.346</hasAdjective><hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CoutryAdj_T.346</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.40</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.5</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.24</locatedIn>
@@ -1208,7 +1251,8 @@
 		
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.438</hasAdjective>
 		
-	<label>"Republic of Cile"</label><subRegionOf>http://www.ontotext.com/kim/2006/5/wkb#Continent_T.5</subRegionOf><partOf>http://www.ontotextcom/kim/2006/05/wkb#GlobalRegion_T.24</partOf><hasAdjective>http://www.ontotext.cm/kim/2006/05/wkb#CountryAdj_T.71</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.41</hasCapital></Country><Country>
+	<label>"Republic of Cile"</label><subRegionOf>http://www.ontotext.com/kim/2006/5/wkb#Continent_T.5</subRegionOf><partOf>http://www.ontotextcom/kim/2006/05/wkb#GlobalRegion_T.24</partOf><hasAdjective>http://www.ontotext.cm/kim/2006/05/wkb#CountryAdj_T.71</hasAdjective><hasCapital>http://www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.41</hasCapital></Country>
+<Country isDupl="0">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.29</locatedIn>
 		<hasMainAlias>"Cayman islands"</hasMainAlias>
@@ -1226,7 +1270,8 @@
 		<generatedBy>http://www.ontotext.com/kim/2006/05/wkb#GNS</generatedBy>
 		<hasAdjective>http://www.ontotext.com/kim/2006/05/wkb#CountryAdj_T.740</hasAdjective>
 		
-	<label>"Cayman islanbds"</label><locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalReion_T.29</locatedIn><hasAlias>"Cayman"</hasAlias><hasCapital>http:/www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.42</hasCapital></Country><Country>
+	<label>"Cayman islanbds"</label><locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalReion_T.29</locatedIn><hasAlias>"Cayman"</hasAlias><hasCapital>http:/www.ontotext.com/kim/2006/05/wkb#CountryCapital_T.42</hasCapital></Country>
+<Country isDupl="1">
 		
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#Continent_T.2</locatedIn>
 		<locatedIn>http://www.ontotext.com/kim/2006/05/wkb#GlobalRegion_T.7</locatedIn>
