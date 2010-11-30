@@ -1,6 +1,9 @@
 package tool;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import com.ontotext.kim.client.entity.EntityDescription;
 
 import model.KIMEntity;
 
@@ -8,12 +11,15 @@ public class FMeasure {
 	private ArrayList<Element> listEntities = new ArrayList<Element>();
 	private int currentElement = -1;
 	
-	public void setCurrentEntity(KIMEntity entity, String targetURI, boolean isRealDupl) {
+	public void addCurrentEntity(EntityDescription entity, String targetURI, boolean isRealDupl) {
 		Element el = new Element();
 		el.setEntity(entity, targetURI, isRealDupl);
 		
 		listEntities.add(el);
 		this.currentElement = listEntities.size()-1;
+	}
+	public void setActive(int activeItem) {
+		this.currentElement = activeItem;
 	}
 	
 	public void addRelatedEntity(String relatedURI, double similary) {
@@ -21,17 +27,27 @@ public class FMeasure {
 		el.add(relatedURI, similary);
 	}
 	
+	public List<Element> getEntities() {
+		return this.listEntities;
+	}
+	public EntityDescription getEntity(int i) {
+		return this.listEntities.get(i).getEntity();
+	}
+	public int countEntities() {
+		return this.listEntities.size();
+	}
+	
 	private class Element {
 		private String entityURI;
-		private KIMEntity entity;
+		private EntityDescription entity;
 		private boolean isRealDupl;
 		private ArrayList<Item> listTarget = new ArrayList<Item>();
-		public void setEntity(KIMEntity entity, String entityURI, boolean isRealDupl) {
+		public void setEntity(EntityDescription entity, String entityURI, boolean isRealDupl) {
 			this.entityURI = entityURI;
 			this.entity = entity;
 			this.isRealDupl = isRealDupl;
 		}
-		public KIMEntity getEntity() {
+		public EntityDescription getEntity() {
 			return entity;
 		}
 		public String getEntityURI() {
