@@ -12,7 +12,8 @@ import model.KIMEntity;
 public interface CandidateDefinition {
 	public void setCandidateDefFile(File f);
 	public List<URI> listCandidate(KIMEntity e); // For add new Entity
-	public List<URI> listCandidate(); // For checking in KB
-	public List<URI> listCandidate(KIMClass c);
-	public List<URI> listCandidate(CanDefPolicy candef);
+	public void getKIMClass(List<URI> classlist);
+	public boolean hasNext();
+	public List<URI> next();
+	public int getStatus();
 }
