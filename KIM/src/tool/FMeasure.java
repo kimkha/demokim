@@ -10,22 +10,50 @@ import model.KIMEntity;
 public class FMeasure {
 	private ArrayList<Element> listEntities = new ArrayList<Element>();
 	private int currentElement = -1;
+	private int bNum = 0;
+	private int dNum = 0;
+	private int bdNum = 0;
+	private boolean isCalc = false;
 	
-	public double getRate() {
-		int real = 0;
-		int truth = 0;
-		for (int i=0; i<this.listEntities.size(); i++) {
-			if (this.listEntities.get(i).isRealDuplicate()) {
-				real++;
-				if (this.listEntities.get(i).isDuplicate()) {
-					truth++;
-				}
-			}
-		}
-		if (truth == 0) {
+	public double getFMeasure(double threshold) {
+		double recall = this.getRecall(threshold);
+		double precision = this.getPrecision(threshold);
+		
+		isCalc = false;
+		
+		if (recall==0 && precision==0) {
 			return 0;
 		}
-		return ((double) real)/truth;
+		return (2*recall*precision)/(recall+precision);
+	}
+	
+	private double getRecall(double threshold) {
+		if (!this.isCalc) {
+			this.calculate(threshold);
+		}
+		return ((double) this.bdNum)/this.bNum;
+	}
+	private double getPrecision(double threshold) {
+		if (!this.isCalc) {
+			this.calculate(threshold);
+		}
+		return ((double) this.bdNum)/this.dNum;
+	}
+	private void calculate(double threshold) {
+		this.bdNum = 0;
+		this.bNum = 0;
+		this.dNum = 0;
+		for (int i=0; i<this.listEntities.size(); i++) {
+			Element el = this.listEntities.get(i);
+			if (el.isRealDuplicate()) {
+				this.bNum++;
+				if (el.isDuplicate(threshold)) {
+					this.bdNum++;
+				}
+			}
+			this.dNum += el.maybeDuplicate(threshold);
+		}
+		isCalc = true;
 	}
 	
 	public void addCurrentEntity(EntityDescription entity, String targetURI, boolean isRealDupl) {
@@ -61,6 +89,7 @@ public class FMeasure {
 		private ArrayList<Item> listTarget = new ArrayList<Item>();
 		private double max = 0;
 		private String maxURI = "";
+		private int mayDupl = -1;
 		public void setEntity(EntityDescription entity, String entityURI, boolean isRealDupl) {
 			this.entityURI = entityURI;
 			this.entity = entity;
@@ -72,11 +101,21 @@ public class FMeasure {
 		public String getEntityURI() {
 			return entityURI;
 		}
-		public boolean isDuplicate() {
-			return this.maxURI.toLowerCase().equals(this.entityURI.toLowerCase());
+		public boolean isDuplicate(double threshold) {
+			return (this.max>threshold)
+				&& this.maxURI.toLowerCase().equals(this.entityURI.toLowerCase());
 		}
 		public boolean isRealDuplicate() {
 			return this.isRealDupl;
+		}
+		public int maybeDuplicate(double threshold) {
+			this.mayDupl = 0;
+			for (int i=0; i<this.listTarget.size(); i++) {
+				if (this.listTarget.get(i).similaryRate >= threshold) {
+					this.mayDupl++;
+				}
+			}
+			return mayDupl;
 		}
 		public void add(String relatedURI, double sim) {
 			Item i = new Item();
