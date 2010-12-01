@@ -72,6 +72,14 @@ public class Test {
 
 			System.out.println(e1.getLabel()[0]+": "+nameMax+" ("+max+")");
 		}
+		
+		double step = 0.1;
+
+		System.out.println("==== F-Measure ====");
+		for (double i=0; i<=1; i+=step) {
+			double f = fMeasure.getFMeasure(i);
+			System.out.println("Threshold: "+i+", F-Measure: "+f);
+		}
 	}
 	
 	public static void exportCountries() throws IOException {
