@@ -192,8 +192,8 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 	}
 
 	@Override
-	public List<Set<KIMEntity>> getDuplicateClus() {
-		List<URI> listCandidate = getCandef().listCandidate();
+	public List<Set<KIMEntity>> getDuplicateClus(KIMEntity entity) {
+		List<URI> listCandidate = getCandef().listCandidate(entity);
 		List<Set<KIMEntity>> clus = new ArrayList<Set<KIMEntity>>();
 		Iterator<URI> it1 = listCandidate.iterator();	
 		Iterator<URI> it2 = listCandidate.iterator();
