@@ -35,8 +35,8 @@ public class Test {
 		
 		KIMAPI.start();
 		//TestData.importData();
-		exportCountries();
-		//compareContries();
+		//exportCountries();
+		compareContries();
 		System.out.println("End");/**/
 		
 	}
@@ -45,7 +45,7 @@ public class Test {
 		FMeasure fMeasure = ReadXML.readWithMeasure("countries_dirty.xml");
 		
 		DuplicateDetection dupl = new DuplicateDetectionDogmatiXImpl();
-		dupl.setCandef(new CandidateDefinitionImpl());
+		dupl.setCandef(new CandidateDefinitionImpl(0));
 		dupl.setDupdef(new DuplicateDefinitionImpl());
 		dupl.setSimThreshold(0.5);
 		dupl.setValueThreshold(0.7);

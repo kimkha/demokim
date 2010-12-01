@@ -11,6 +11,23 @@ public class FMeasure {
 	private ArrayList<Element> listEntities = new ArrayList<Element>();
 	private int currentElement = -1;
 	
+	public double getRate() {
+		int real = 0;
+		int truth = 0;
+		for (int i=0; i<this.listEntities.size(); i++) {
+			if (this.listEntities.get(i).isRealDuplicate()) {
+				real++;
+				if (this.listEntities.get(i).isDuplicate()) {
+					truth++;
+				}
+			}
+		}
+		if (truth == 0) {
+			return 0;
+		}
+		return ((double) real)/truth;
+	}
+	
 	public void addCurrentEntity(EntityDescription entity, String targetURI, boolean isRealDupl) {
 		Element el = new Element();
 		el.setEntity(entity, targetURI, isRealDupl);
@@ -42,6 +59,8 @@ public class FMeasure {
 		private EntityDescription entity;
 		private boolean isRealDupl;
 		private ArrayList<Item> listTarget = new ArrayList<Item>();
+		private double max = 0;
+		private String maxURI = "";
 		public void setEntity(EntityDescription entity, String entityURI, boolean isRealDupl) {
 			this.entityURI = entityURI;
 			this.entity = entity;
@@ -53,6 +72,9 @@ public class FMeasure {
 		public String getEntityURI() {
 			return entityURI;
 		}
+		public boolean isDuplicate() {
+			return this.maxURI.toLowerCase().equals(this.entityURI.toLowerCase());
+		}
 		public boolean isRealDuplicate() {
 			return this.isRealDupl;
 		}
@@ -61,6 +83,10 @@ public class FMeasure {
 			i.setEntity(relatedURI);
 			i.setSimilaryRate(sim);
 			listTarget.add(i);
+			if (sim>max) {
+				this.max = sim;
+				this.maxURI = relatedURI;
+			}
 		}
 		public ArrayList<Item> getListTarget() {
 			return listTarget;
