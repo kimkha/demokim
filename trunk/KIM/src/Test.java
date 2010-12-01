@@ -1,3 +1,4 @@
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Iterator;
 
@@ -73,13 +74,17 @@ public class Test {
 			System.out.println(e1.getLabel()[0]+": "+nameMax+" ("+max+")");
 		}
 		
-		double step = 0.1;
+		double step = 0.01;
 
 		System.out.println("==== F-Measure ====");
+		FileWriter file = new FileWriter("result.csv");
+		file.write("a, f-measure\n");
 		for (double i=0; i<=1; i+=step) {
 			double f = fMeasure.getFMeasure(i);
 			System.out.println("Threshold: "+i+", F-Measure: "+f);
+			file.write(i+","+f+"\n");
 		}
+		file.close();
 	}
 	
 	public static void exportCountries() throws IOException {
