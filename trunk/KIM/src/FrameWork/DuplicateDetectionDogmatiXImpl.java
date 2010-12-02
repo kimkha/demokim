@@ -45,7 +45,7 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 	@Override
 	public double getSimilarity(KIMEntity e1, KIMEntity e2) {
 		if(prune(e1,e2)){
-			return 1;
+			return 0;
 		}Collection<URI> rela1 = e1.getRelationTypes();
 		for(Iterator<URI> it = rela1.iterator(); it.hasNext(); ){
 			URI uri = it.next();
