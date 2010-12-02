@@ -38,7 +38,15 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 		// TODO Auto-generated method stub
 		// lay cac thuoc tinh / quan he don nhat
 		// kiem tra xem co giong nhau hay khong
-		Collection<URI> rela1 = e1.getRelationTypes();
+		
+		return false;
+	}
+
+	@Override
+	public double getSimilarity(KIMEntity e1, KIMEntity e2) {
+		if(prune(e1,e2)){
+			return 1;
+		}Collection<URI> rela1 = e1.getRelationTypes();
 		for(Iterator<URI> it = rela1.iterator(); it.hasNext(); ){
 			URI uri = it.next();
 			Collection<Resource> list1 = e1.getRelations(uri);
@@ -49,17 +57,9 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 			KIMRelation kimRelation = new KIMRelation(uri);
 			if(kimRelation.isFunctional() && kimRelation.isInverseFunctional()){
 				if(list1.iterator().next().stringValue().equals(list2.iterator().next())){
-					return true;
+					return 1;
 				}
 			}
-		}
-		return false;
-	}
-
-	@Override
-	public double getSimilarity(KIMEntity e1, KIMEntity e2) {
-		if(prune(e1,e2)){
-			return 1;
 		}
 		List<Description> eledes1 = getDupdef().getElementDescription(e1);
 		List<Description> relades1 = getDupdef().getRelationDescription(e1);
