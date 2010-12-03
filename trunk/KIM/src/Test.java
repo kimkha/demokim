@@ -7,6 +7,7 @@ import model.KIMEntity;
 import org.jdom.JDOMException;
 import org.openrdf.model.URI;
 
+import tool.Config;
 import tool.FMeasure;
 import tool.KIMAPI;
 import tool.parser.CountryXML;
@@ -28,16 +29,14 @@ public class Test {
 	 */
 	public static void main(String[] args) throws IOException, JDOMException {
 		// Load default config...
-		/*
-		Set<String> keys = ConfigFile.getListClass();
-
-		System.out.println(ConfigFile.getElementsByClass(keys.iterator().toString()));
+		
+		System.out.println(Config.getPriority("Country", "hasCapital"));
 		/**/
 		
-		KIMAPI.start();
+		//KIMAPI.start();
 		//TestData.importData();
 		//exportCountries();
-		compareContries();
+		//compareContries();
 		System.out.println("End");/**/
 		
 	}
@@ -48,7 +47,7 @@ public class Test {
 		DuplicateDetection dupl = new DuplicateDetectionDogmatiXImpl();
 		dupl.setCandef(new CandidateDefinitionImpl(0));
 		dupl.setDupdef(new DuplicateDefinitionImpl());
-		dupl.setSimThreshold(0.5);
+		dupl.setSimThreshold(0.7);
 		dupl.setValueThreshold(0.7);
 		
 		for (int i=0; i<fMeasure.countEntities(); i++) {
