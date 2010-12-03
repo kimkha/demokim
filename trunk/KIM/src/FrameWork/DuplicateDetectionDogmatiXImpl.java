@@ -2,7 +2,6 @@ package FrameWork;
 
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -11,9 +10,7 @@ import java.util.Set;
 
 import model.Description;
 import model.KIMEntity;
-import model.KIMRelation;
 
-import org.openrdf.model.Resource;
 import org.openrdf.model.URI;
 
 import uk.ac.shef.wit.simmetrics.similaritymetrics.Levenshtein;
@@ -44,23 +41,6 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 
 	@Override
 	public double getSimilarity(KIMEntity e1, KIMEntity e2) {
-//		if(prune(e1,e2)){
-//			return 0;
-//		}Collection<URI> rela1 = e1.getRelationTypes();
-//		for(Iterator<URI> it = rela1.iterator(); it.hasNext(); ){
-//			URI uri = it.next();
-//			Collection<Resource> list1 = e1.getRelations(uri);
-//			Collection<Resource> list2 = e2.getRelations(uri);
-//			if(list1.size() == 0 || list2.size() == 0){
-//				continue;
-//			}
-//			KIMRelation kimRelation = new KIMRelation(uri);
-//			if(kimRelation.isFunctional() && kimRelation.isInverseFunctional()){
-//				if(list1.iterator().next().stringValue().equals(list2.iterator().next())){
-//					return 1;
-//				}
-//			}
-//		}
 		List<Description> eledes1 = getDupdef().getElementDescription(e1);
 		List<Description> relades1 = getDupdef().getRelationDescription(e1);
 		List<Description> eledes2 = getDupdef().getElementDescription(e2);

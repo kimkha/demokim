@@ -8,11 +8,7 @@ import java.util.List;
 import org.openrdf.model.Resource;
 import org.openrdf.model.URI;
 
-import tool.KIMAPI;
-
 import com.ontotext.kim.client.entity.EntityDescription;
-import com.ontotext.kim.client.semanticrepository.ClosableIterator;
-import com.ontotext.kim.client.semanticrepository.SemanticRepositoryException;
 @SuppressWarnings("serial")
 public class KIMRelation extends KIMProperty{
 	private EntityDescription entdes;
@@ -34,30 +30,10 @@ public class KIMRelation extends KIMProperty{
 		}
 	}
 	public boolean isFunctional(){
-		try {
-			ClosableIterator<Resource> list = KIMAPI.getSemRepoApi().getDirectClasses(this.res);
-			while(list.hasNext()){
-				if(list.next().stringValue().equals("FunctionalProperty"));
-				return true;
-			}
-		} catch (SemanticRepositoryException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		return false;
 	}
 	
 	public boolean isInverseFunctional(){
-		try {
-			ClosableIterator<Resource> list = KIMAPI.getSemRepoApi().getDirectClasses(this.res);
-			while(list.hasNext()){
-				if(list.next().stringValue().equals("InverseFunctionalProperty"));
-				return true;
-			}
-		} catch (SemanticRepositoryException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		return false;
 	}
 	
