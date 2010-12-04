@@ -37,9 +37,10 @@ public class Test {
 		KIMAPI.start();
 		//TestData.importData();
 		//exportCountries();
-		for (int i=0; i<=10; i++) {
-			compareCountries(i);
-		}
+//		for (int i=0; i<=10; i++) {
+//			compareCountries(i);
+//		}
+		compareCountries(7);
 		System.out.println("End");/**/
 		
 	}
