@@ -14,6 +14,8 @@ import model.KIMEntity;
 import org.openrdf.model.URI;
 
 import uk.ac.shef.wit.simmetrics.similaritymetrics.Levenshtein;
+import uk.ac.shef.wit.simmetrics.similaritymetrics.NeedlemanWunch;
+import uk.ac.shef.wit.simmetrics.similaritymetrics.SmithWatermanGotohWindowedAffine;
 
 public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 
@@ -165,6 +167,8 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 			return 0;
 		}else{
 			Levenshtein sim = new Levenshtein();
+			SmithWatermanGotohWindowedAffine smwgwa = new SmithWatermanGotohWindowedAffine();
+			NeedlemanWunch nedle = new NeedlemanWunch();
 			return sim.getSimilarity(des1.getValue(), des2.getValue());
 		}
 		
