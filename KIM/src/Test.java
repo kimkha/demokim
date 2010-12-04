@@ -1,5 +1,6 @@
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Iterator;
 
 import model.KIMEntity;
@@ -29,25 +30,27 @@ public class Test {
 	 */
 	public static void main(String[] args) throws IOException, JDOMException {
 		// Load default config...
-		
+		/*
 		System.out.println(Config.getPriority("Country", "hasCapital"));
 		/**/
 		
-		//KIMAPI.start();
+		KIMAPI.start();
 		//TestData.importData();
 		//exportCountries();
-		//compareContries();
+		for (int i=0; i<=10; i++) {
+			compareCountries(i);
+		}
 		System.out.println("End");/**/
 		
 	}
 	
-	public static void compareContries() throws JDOMException, IOException {
+	public static void compareCountries(int val) throws JDOMException, IOException {
 		FMeasure fMeasure = ReadXML.readWithMeasure("countries_dirty.xml");
 		
 		DuplicateDetection dupl = new DuplicateDetectionDogmatiXImpl();
 		dupl.setCandef(new CandidateDefinitionImpl(0));
 		dupl.setDupdef(new DuplicateDefinitionImpl());
-		dupl.setSimThreshold(0.7);
+		dupl.setSimThreshold(((double) val)/10);
 		dupl.setValueThreshold(0.7);
 		
 		for (int i=0; i<fMeasure.countEntities(); i++) {
@@ -76,8 +79,9 @@ public class Test {
 		double step = 0.01;
 
 		System.out.println("==== F-Measure ====");
-		FileWriter file = new FileWriter("result.csv");
+		FileWriter file = new FileWriter("result"+val+".csv");
 		file.write("a, f-measure\n");
+		
 		for (double i=0; i<=1; i+=step) {
 			double f = fMeasure.getFMeasure(i);
 			System.out.println("Threshold: "+i+", F-Measure: "+f);
