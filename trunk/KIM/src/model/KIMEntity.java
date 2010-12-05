@@ -34,8 +34,7 @@ public class KIMEntity extends KIMResource implements EntityDescription{
 	public KIMEntity(EntityDescription ent) {
 		this.entdes = ent;
 		res = ent.getResource();
-		this.extract();
-		this.isExtracted = true;
+		extract();
 	}
 	
 	public KIMEntity(File xmlfile){
