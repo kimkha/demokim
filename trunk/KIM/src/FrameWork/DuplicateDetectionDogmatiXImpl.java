@@ -13,6 +13,7 @@ import model.KIMEntity;
 
 import org.openrdf.model.URI;
 
+import tool.Config;
 import uk.ac.shef.wit.simmetrics.similaritymetrics.Levenshtein;
 import uk.ac.shef.wit.simmetrics.similaritymetrics.NeedlemanWunch;
 import uk.ac.shef.wit.simmetrics.similaritymetrics.SmithWatermanGotohWindowedAffine;
@@ -158,17 +159,17 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 
 	private double getStrength(Description des1, Description des2) {
 		//return KIMAPI.getSemRepoApi().getStatementsCount(new URIImpl(WKBConstants.CLASS_LOCATION), new URIImpl(WKBConstants.PROPERTY_LONGITUDE), new LiteralImpl(""), true);
-		
-		return 1;
+		double val = Config.getPriority("Country", des1.getProperty());
+		return val;
 	}
 
 	private double getSim(Description des1, Description des2) {
 		if(!isComparable(des1.getProperty(),des2.getProperty())){
 			return 0;
 		}else{
-			Levenshtein sim = new Levenshtein();
-			SmithWatermanGotohWindowedAffine smwgwa = new SmithWatermanGotohWindowedAffine();
-			NeedlemanWunch nedle = new NeedlemanWunch();
+//			Levenshtein sim = new Levenshtein();
+//			SmithWatermanGotohWindowedAffine sim = new SmithWatermanGotohWindowedAffine();
+			NeedlemanWunch sim = new NeedlemanWunch();
 			return sim.getSimilarity(des1.getValue(), des2.getValue());
 		}
 		
