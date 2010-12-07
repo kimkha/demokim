@@ -168,8 +168,8 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 			return 0;
 		}else{
 //			Levenshtein sim = new Levenshtein();
-//			SmithWatermanGotohWindowedAffine sim = new SmithWatermanGotohWindowedAffine();
-			NeedlemanWunch sim = new NeedlemanWunch();
+			SmithWatermanGotohWindowedAffine sim = new SmithWatermanGotohWindowedAffine();
+//			NeedlemanWunch sim = new NeedlemanWunch();
 			return sim.getSimilarity(des1.getValue(), des2.getValue());
 		}
 		
