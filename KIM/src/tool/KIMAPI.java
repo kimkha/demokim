@@ -16,6 +16,7 @@ import com.ontotext.kim.client.GetService;
 import com.ontotext.kim.client.KIMService;
 import com.ontotext.kim.client.entity.EntityAPI;
 import com.ontotext.kim.client.entity.EntityDescription;
+import com.ontotext.kim.client.model.WKBConstants;
 import com.ontotext.kim.client.query.KIMQueryException;
 import com.ontotext.kim.client.query.QueryAPI;
 import com.ontotext.kim.client.query.SemanticQuery;
@@ -33,7 +34,8 @@ public class KIMAPI {
 	private static SemanticRepositoryAPI semRepoApi = null;
 	private static OntologyAPI ontoApi = null;
 	private static Ontology onto = null;
-	
+	private static Iterator<URI> functionalProperties = null;
+	private static Iterator<URI> inverseFunctionalProperties = null;
 	public static void start(){
 		KIMService service;
 		try {
@@ -44,11 +46,13 @@ public class KIMAPI {
 			setSemRepoApi(service
 					.getSemanticRepositoryAPI());
 			setOnto(ontoApi.getOntology());
+			functionalProperties = KIMAPI.getAllEntityURIInClass(new URIImpl(WKBConstants.OWL_NS+"FunctionalPropert"));
+			inverseFunctionalProperties = KIMAPI.getAllEntityURIInClass(new URIImpl(WKBConstants.OWL_NS+"InverseFunctionalPropert"));
 		} catch (RemoteException e) {
 			e.printStackTrace();
 		} catch (NotBoundException e) {
 			e.printStackTrace();
-		}
+		} 
 	}
 	
 	public static List<KIMEntity> getEntities(SemanticQuery seq) {
@@ -153,6 +157,7 @@ public class KIMAPI {
 	public static Iterator<URI> getAllEntityURIInClass(String kimClass) {
 		try {
 			ClosableIterator<URI> ci = semRepoApi.getInstances(new URIImpl(kimClass));
+		
 			return ci;
 		} catch (SemanticRepositoryException e) {
 			// TODO Auto-generated catch block
@@ -173,5 +178,23 @@ public class KIMAPI {
 			e.printStackTrace();
 		}*/
 		return null;
+	}
+	
+	public static boolean isFunctionalProperty(URI uri){
+		while(functionalProperties.hasNext()){
+			if(functionalProperties.next().toString().equals(uri.toString())){
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public static boolean isInverseFunctionalProperty(URI uri){
+		while(inverseFunctionalProperties.hasNext()){
+			if(inverseFunctionalProperties.next().toString().equals(uri.toString())){
+				return true;
+			}
+		}
+		return false;
 	}
 }
