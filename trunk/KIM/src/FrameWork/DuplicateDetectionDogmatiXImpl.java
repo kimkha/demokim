@@ -12,8 +12,10 @@ import model.Description;
 import model.KIMEntity;
 
 import org.openrdf.model.URI;
+import org.openrdf.model.impl.URIImpl;
 
 import tool.Config;
+import tool.KIMAPI;
 import uk.ac.shef.wit.simmetrics.similaritymetrics.Levenshtein;
 import uk.ac.shef.wit.simmetrics.similaritymetrics.NeedlemanWunch;
 import uk.ac.shef.wit.simmetrics.similaritymetrics.SmithWatermanGotohWindowedAffine;
@@ -44,6 +46,7 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 
 	@Override
 	public double getSimilarity(KIMEntity e1, KIMEntity e2) {
+		
 		List<Description> eledes1 = getDupdef().getElementDescription(e1);
 		List<Description> relades1 = getDupdef().getRelationDescription(e1);
 		List<Description> eledes2 = getDupdef().getElementDescription(e2);
@@ -109,13 +112,22 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 			for(int j=0; j < relades2.size(); j++){
 				des2 = relades2.get(j);
 				double sim = getSim(des1,des2);
+				URI uri = new URIImpl(des1.getProperty());
 				if(sim==1)
 				{
+					
+					if(KIMAPI.isFunctionalProperty(uri) && KIMAPI.isInverseFunctionalProperty(uri)){
+						return 1;
+					}
 					simNr+= getStrength(des1,des2);
 					if(!set.contains(des1))
 						set.add(des1);
 					if(!set.contains(des2))
 						set.add(des2);
+				}else{
+					if(KIMAPI.isFunctionalProperty(uri)){
+						return 0;
+					}
 				}
 			}	
 		}
