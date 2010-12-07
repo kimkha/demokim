@@ -40,23 +40,12 @@ public class KIMRelation extends KIMProperty{
 	}
 	
 	public boolean isFunctional(){
-//		Iterator<Resource> it = type.iterator();
-//		while(it.hasNext()){
-//			if(it.next().stringValue().equals("FunctionalProperty")){
-//				return true;
-//			}
-//		}
-		return false;
+		return KIMAPI.isFunctionalProperty((URI)res);
 	}
 	
 	public boolean isInverseFunctional(){
-//		Iterator<Resource> it = type.iterator();
-//		while(it.hasNext()){
-//			if(it.next().stringValue().equals("InverseFunctionalProperty")){
-//				return true;
-//			}
-//		}
-		return false;
+		return KIMAPI.isInverseFunctionalProperty((URI)res);
+	
 	}
 	
 	public boolean isTransitive(){
