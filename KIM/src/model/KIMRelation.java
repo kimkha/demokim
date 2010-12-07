@@ -40,22 +40,22 @@ public class KIMRelation extends KIMProperty{
 	}
 	
 	public boolean isFunctional(){
-		Iterator<Resource> it = type.iterator();
-		while(it.hasNext()){
-			if(it.next().stringValue().equals("FunctionalProperty")){
-				return true;
-			}
-		}
+//		Iterator<Resource> it = type.iterator();
+//		while(it.hasNext()){
+//			if(it.next().stringValue().equals("FunctionalProperty")){
+//				return true;
+//			}
+//		}
 		return false;
 	}
 	
 	public boolean isInverseFunctional(){
-		Iterator<Resource> it = type.iterator();
-		while(it.hasNext()){
-			if(it.next().stringValue().equals("InverseFunctionalProperty")){
-				return true;
-			}
-		}
+//		Iterator<Resource> it = type.iterator();
+//		while(it.hasNext()){
+//			if(it.next().stringValue().equals("InverseFunctionalProperty")){
+//				return true;
+//			}
+//		}
 		return false;
 	}
 	

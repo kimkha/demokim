@@ -40,7 +40,7 @@ public class Test {
 //		for (int i=0; i<=10; i++) {
 //			compareCountries(i);
 //		}
-		compareCountries(7);
+		compareCountries(8);
 		System.out.println("End");/**/
 		
 	}
