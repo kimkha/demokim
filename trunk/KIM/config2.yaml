@@ -1,0 +1,10 @@
+Country:
+- hasCapital: 1
+- locatedIn: 0.9
+- type: 0.2
+- label: 0.6
+- hasAlias: 0.4
+- subRegionOf: 0.7
+- partOf: 0.7
+- generatedBy: 0.0
+- hasAdjective: 0.6
