@@ -168,9 +168,10 @@ public class KIMEntity extends KIMResource implements EntityDescription{
 						}
 				}
 				else{
-					for(int j=0; j<list.size(); j++)
+					for(int j=0; j<list.size(); j++) {
 						str += prefix+"\t<" + tag + ">"+list.get(j).res.toString()
-								+"</" + tag + ">\n";
+							+"</" + tag + ">\n";
+					}
 				}
 			}
 			str += prefix+"</"+kindOfTag+">\n";
