@@ -63,7 +63,7 @@ public class DuplicateDefinitionImpl implements DuplicateDefinition{
 					!rela.getLabel().equals("generatedBy") ){
 				List<KIMEntity> listobj = rela.listobj;
 				for(KIMEntity k : listobj){
-					Description d = new Description(rela.getLabel(),k.res.toString());
+					Description d = new Description(rela.res.toString(),k.res.toString());
 					list.add(d);
 				}
 			}

@@ -1,5 +1,7 @@
 package tool;
 
+import gate.creole.ontology.OConstants.OWL;
+
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
@@ -46,8 +48,8 @@ public class KIMAPI {
 			setSemRepoApi(service
 					.getSemanticRepositoryAPI());
 			setOnto(ontoApi.getOntology());
-			functionalProperties = KIMAPI.getAllEntityURIInClass(new URIImpl(WKBConstants.OWL_NS+"FunctionalPropert"));
-			inverseFunctionalProperties = KIMAPI.getAllEntityURIInClass(new URIImpl(WKBConstants.OWL_NS+"InverseFunctionalPropert"));
+			functionalProperties = KIMAPI.getAllEntityURIInClass(new URIImpl(OWL.FUNCTIONALPROPERTY));
+			inverseFunctionalProperties = KIMAPI.getAllEntityURIInClass(new URIImpl(OWL.INVERSEFUNCTIONALPROPERTY));
 		} catch (RemoteException e) {
 			e.printStackTrace();
 		} catch (NotBoundException e) {
