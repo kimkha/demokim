@@ -116,18 +116,18 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 				if(sim==1)
 				{
 					
-					if(KIMAPI.isFunctionalProperty(uri) && KIMAPI.isInverseFunctionalProperty(uri)){
-						return 1;
-					}
+//					if(KIMAPI.isFunctionalProperty(uri) && KIMAPI.isInverseFunctionalProperty(uri)){
+//						return 1;
+//					}
 					simNr+= getStrength(des1,des2);
 					if(!set.contains(des1))
 						set.add(des1);
 					if(!set.contains(des2))
 						set.add(des2);
 				}else{
-					if(KIMAPI.isFunctionalProperty(uri)){
-						return 0;
-					}
+//					if(KIMAPI.isFunctionalProperty(uri)){
+//						return 0;
+//					}
 				}
 			}	
 		}
@@ -171,16 +171,16 @@ public class DuplicateDetectionDogmatiXImpl implements DuplicateDetection {
 
 	private double getStrength(Description des1, Description des2) {
 		//return KIMAPI.getSemRepoApi().getStatementsCount(new URIImpl(WKBConstants.CLASS_LOCATION), new URIImpl(WKBConstants.PROPERTY_LONGITUDE), new LiteralImpl(""), true);
-		double val = Config.getPriority("Country", des1.getProperty());
-		return val;
+		//double val = Config.getPriority("Country", des1.getProperty());
+		return 1;
 	}
 
 	private double getSim(Description des1, Description des2) {
 		if(!isComparable(des1.getProperty(),des2.getProperty())){
 			return 0;
 		}else{
-//			Levenshtein sim = new Levenshtein();
-			SmithWatermanGotohWindowedAffine sim = new SmithWatermanGotohWindowedAffine();
+			Levenshtein sim = new Levenshtein();
+//			SmithWatermanGotohWindowedAffine sim = new SmithWatermanGotohWindowedAffine();
 //			NeedlemanWunch sim = new NeedlemanWunch();
 			return sim.getSimilarity(des1.getValue(), des2.getValue());
 		}

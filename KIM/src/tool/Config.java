@@ -11,6 +11,13 @@ import org.yaml.snakeyaml.Yaml;
 public class Config {
 	private static Yaml yaml = null;
 	private static Map<String, Object> map = null;
+	private static String filename = "config.yaml";
+	
+	public static void setFile(String file) {
+		filename = file;
+		yaml = null;
+		map = null;
+	}
 	
 	public static Set<String> getListClass() {
 		if (yaml==null) {
@@ -51,7 +58,7 @@ public class Config {
 	private static void loadFromFile() {
 		yaml = new Yaml();
 		try {
-			map = (Map<String, Object>) yaml.load(new FileReader("config.yaml"));
+			map = (Map<String, Object>) yaml.load(new FileReader(filename));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

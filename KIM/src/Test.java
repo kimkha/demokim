@@ -1,3 +1,6 @@
+import gate.creole.ontology.OConstants.OWL;
+import gate.creole.ontology.OConstants.RDF;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -7,6 +10,7 @@ import model.KIMEntity;
 
 import org.jdom.JDOMException;
 import org.openrdf.model.URI;
+import org.openrdf.model.impl.URIImpl;
 
 import tool.Config;
 import tool.FMeasure;
@@ -19,6 +23,7 @@ import FrameWork.DuplicateDetection;
 import FrameWork.DuplicateDetectionDogmatiXImpl;
 
 import com.ontotext.kim.client.model.WKBConstants;
+import com.ontotext.kim.client.semanticrepository.SemanticRepositoryException;
 
 
 public class Test {
@@ -27,8 +32,9 @@ public class Test {
 	 * @param args
 	 * @throws IOException 
 	 * @throws JDOMException 
+	 * @throws SemanticRepositoryException 
 	 */
-	public static void main(String[] args) throws IOException, JDOMException {
+	public static void main(String[] args) throws IOException, JDOMException, SemanticRepositoryException {
 		// Load default config...
 		/*
 		System.out.println(Config.getPriority("Country", "hasCapital"));
@@ -36,13 +42,64 @@ public class Test {
 		
 		KIMAPI.start();
 		//TestData.importData();
+//		KIMAPI.getSemRepoApi().addStatement(new URIImpl(WKBConstants.PROPERTY_HAS_CAPITAL), new URIImpl(RDF.TYPE), new URIImpl(OWL.FUNCTIONALPROPERTY));
+//		KIMAPI.getSemRepoApi().addStatement(new URIImpl(WKBConstants.PROPERTY_HAS_CAPITAL), new URIImpl(RDF.TYPE), new URIImpl(OWL.INVERSEFUNCTIONALPROPERTY));
+
 		//exportCountries();
-//		for (int i=0; i<=10; i++) {
-//			compareCountries(i);
+//		for (int i=0; i<=14; i++) {
+//			chooseConfig(i);
 //		}
-		compareCountries(8);
+		chooseConfig(2);
+//		compareCountries(8);
 		System.out.println("End");/**/
 		
+	}
+	
+	public static void chooseConfig(int val) throws JDOMException, IOException {
+		Config.setFile("r/conf"+val+".yaml");
+		FMeasure fMeasure = ReadXML.readWithMeasure("countries_dirty.xml");
+		
+		DuplicateDetection dupl = new DuplicateDetectionDogmatiXImpl();
+		dupl.setCandef(new CandidateDefinitionImpl(0));
+		dupl.setDupdef(new DuplicateDefinitionImpl());
+		dupl.setSimThreshold(0.8);
+		dupl.setValueThreshold(0.7);
+		
+		for (int i=0; i<fMeasure.countEntities(); i++) {
+//		for (int i=0; i<10; i++) {
+			KIMEntity e1 = new KIMEntity(fMeasure.getEntity(i));
+			double max = -1;
+			String nameMax = "";
+			fMeasure.setActive(i);
+
+			Iterator<URI> kbEntities = KIMAPI.getAllEntityURIInClass(WKBConstants.CLASS_COUNTRY);
+			while (kbEntities.hasNext()) {
+				KIMEntity e2 = new KIMEntity(kbEntities.next());
+				e2.extract();
+				double sim = dupl.getSimilarity(e1, e2);
+				fMeasure.addRelatedEntity(e2.getResource().stringValue(), sim);
+				
+				if (sim>max) {
+					max = sim;
+					nameMax = e2.getLabel()[0];
+				}
+			}
+
+			System.out.println(e1.getLabel()[0]+": "+nameMax+" ("+max+")");
+		}
+		
+		double step = 0.01;
+
+		System.out.println("==== F-Measure ====");
+		FileWriter file = new FileWriter("r/result"+val+".csv");
+		file.write("a, f-measure\n");
+		
+		for (double i=0; i<=1; i+=step) {
+			double f = fMeasure.getFMeasure(i);
+			System.out.println("Threshold: "+i+", F-Measure: "+f);
+			file.write(i+","+f+"\n");
+		}
+		file.close();
 	}
 	
 	public static void compareCountries(int val) throws JDOMException, IOException {

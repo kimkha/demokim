@@ -1,0 +1,10 @@
+Country:
+- hasCapital: 0.4917810131
+- locatedIn: 0.6711342167
+- type: 0.8419134207
+- label: 0.8952243179
+- hasAlias: 0.9771394026
+- subRegionOf: 0.9964016206
+- partOf: 0.2471277104
+- hasAdjective: 0.6709294436
+- generatedBy: 0
